@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>FIDELITI Dashboard Documentation</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="FIDELITI Dashboard Documentation">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="assets/images/icon2.png">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/icon2.png" alt="logo"><span class="logo-text">FIDELITI <span class="text-alt">Dashboard Docs</span></span></a></div>
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+
+		            <a href="#item-2-1" class="btn btn-secondary d-none d-lg-flex">Download</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-address-card"></i></span>About FIDELITI</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Normative Modelling</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Multimodal Neuroimaging</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Reference Cohort</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Dashboard Workflow</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Security and Privacy</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Download</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Dependencies</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Preference Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Running FIDELITI</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-person"></i></span>Participants</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Participant Demographics</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Imaging Files</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Dicom to Nifti Conversion</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Importing Participants</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>Processing</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Processing Queue</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Processing Preferences</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Cortical Morphometry</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">Functional Connectivity</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">White Matter Microstructure</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-6">Custom Pipelines</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-7">Neuroimaging Feature List</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Dashboard</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Participant Selection</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">FIDELITI Graphs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Summary Report</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-4">Export Deviation Scores</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-5">Quality Assessment</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Demonstration</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-id-badge"></i></span>Profiles</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Profile List</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Profile Edit</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Preferences</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">MATLAB Runtime Directory</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">FIDELITI Working Directory</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Deviation Score Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Resting State fMRI Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">Scanner Harmonization</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Processing</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-10"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>Supplementary</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-1">How to cite FIDELITI</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-2">Funding Sources</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-3">Neuroimaging Feature List</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-4">Version Information</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">About the FIDELITI Dashboard<span class="docs-time">Last updated: 2025-11-21</span></h1>
+					    <section class="docs-intro">
+
+							<p>The purpose of the FIDELITI Dashboard (Fingerprinting Individual Differences in Lesion
+								Impact Through Imaging) is to provide a framework for visualizing personalized
+								neuroimaging features in a single participant in relation to their typically-developing peers. </p>
+
+							<p>Traditional neuroimaging analyses may focus on comparisons between large groups that
+								can potentially obscure informative	individual differences between people. A way was needed
+								to embrace individual differences and investigate them to explore how variability in developmental
+								trajectories and neuroplasticity after injury associate with function.</p>
+
+							<p>This is especially important for children and adolescents who have complex neurological
+								conditions or neurodevelopmental disorders. By identifying differences in brain features,
+								perhaps we can identify areas of relative strengths and weaknesses that can guide future interventions.
+								Current developments in normative modelling have made this personalized neuroimaging possible.
+								This is akin to growth charts typically used to chart physical development in babies and
+								young children. For more details about the FIDELITI Dashboard, please see <a href="">Carlson et al. (2026)</a>.</p>
+						</section><!--//docs-intro-->
+
+						
+				    </header>
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Normative Modelling</h2>
+						<p>Normative modelling provides an opportunity to quantify departures from the typical population
+							using statistical regression techniques. This technique can be useful in neuroimaging
+						since it could be the degree of deviation from typical peers that is predictive of function
+						rather than the raw metric value itself. Normative modelling can also be useful when studying
+						development in children and adolescents given that there can be varying trajectories among children.
+							An added complexity is that neuroimaging metrics change over the course of development as children mature.
+							Normative modelling allows researchers to embrace individual variability along a developmental trajectory
+							while at the same time identifying possible deviations from that trajectory that may be clinically informative. </p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Multimodal Neuroimaging</h2>
+						<p>Magnetic resonance (MR) imaging provides a unique opportunity to measure brain characteristics in many different ways.
+
+							<ul>
+								<li><b>Cortical morphometry</b> captures structural information such as the thickness of the grey matter
+							ribbon (cortical thickness) in atlas-based regions of interest or volumes of grey matter structures.</li>
+								<li><b>Functional connectivity</b> captures how fluctuations in blood oxygenation levels vary over time
+							(at rest) and how synchronous these temporal patterns can be in spatially separate but
+							related regions of the brain, inferring that those areas are functionally connected.</li>
+								<li><b>Diffusion imaging</b> can capture information about the underlying microstructure of white matter,
+							possibly informing us on how well these bundles transmit information between brain areas.</li>
+							</ul></p>
+
+						<p>In the FIDELITI Dashboard, these neuroimaging metrics are in turn grouped within broader functional domains of
+							interest. These domains include sensorimotor, language, vision, attention, memory, and
+							audition. The result is that over 150 neuroimaging features are available for viewing in
+							the dashboard. </p>
+
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 ">
+						        <img style="width:500px;" src="assets/images/features.png" alt="" title="Features of interest"/>
+							</div><!--//col-->
+						</div><!--//gallery-->
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Reference Cohort</h2>
+						<p>A large reference cohort of children, adolescents, and young adults is available for comparison.
+							Approximately 900 control participants with no neurological conditions ranging in age from 5-22 years
+							compose the reference cohort. This cross-sectional cohort defines the range of typical variability
+							on over 150 extracted neuroimaging features. These individuals were scanned on 3T scanners as part
+							of the Human Connectome	Project (Development) or at the Alberta Children’s Hospital, a tertiary
+							care hospital with a research-dedicated scanner. Imaging from this cohort has been processed using
+							the same pipelines that will process your participants allowing for meaningful comparisons.</p>
+					</section>
+
+					<section class="docs-section" id="item-1-4">
+						<h2 class="section-heading">Dashboard Workflow</h2>
+						<p>FIDELITI has a simple workflow. First, participants' demographic information and imaging session files
+							are entered. Processing pipeline(s) are then selected according to which neuroimaging modalities
+						are available. Once processing has been successfully completed, the desired functional domain profile can be selected
+						and the dashboard can be viewed. </p>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 ">
+						        <img style="width:500px;" src="assets/images/workflow.png" alt="" title="Features of interest"/>
+							</div><!--//col-->
+						</div><!--//gallery-->
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-1-5">
+						<h2 class="section-heading">Security and Privacy</h2>
+						<p>To ensure security and privacy of sensitive data, the demographic and imaging data you enter
+							into the FIDELITI Dashboard never leave your local computer. Data is not transmitted at any time to any
+							online cloud-based servers. For additional privacy, potentially sensitive demographic
+							information such as dates of birth or names are not required and names can be changed
+							(or omitted) if preferred. Participants can be tracked through the Dashboard solely through
+							their anonymized ID number. Note also that all names shown in this documentation have been
+							changed to ensure privacy and confidentiality.</p>
+					</section>
+					
+			    </article>
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    <section class="docs-intro">
+							<p>The FIDELITI Dashboard is currently available for MacOS only. Versions for other operating systems
+								are under development. FIDELITI is deployed as a compiled application and is installed via a disk image.
+							Additional software packages are required for full functionality. See the <a class="scrollto" href="#item-2-2">Dependencies</a> section
+								below for more details on those additional dependencies.</p>
+						</section><!--//docs-intro-->
+				    </header>
+
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Download</h2>
+						<p>Download the disk image here for MacOS.</p>
+						<a href="#item-2-1" class="btn btn-secondary">Download FIDELITI for MacOS</a>
+					</section><!--//section-->
+
+				     <section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Dependencies</h2>
+						<p>In order for the full multimodal analysis pipelines to be operational, the FIDELITI Dashboard
+							requires several other software packages to be installed.
+
+							<ul>
+								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
+									   target="_blank">MATLAB Runtime Library R2017b (9.3)</a>. This runtime library is
+								required for the cortical morphometry (CAT12) standalone processing toolbox and does not
+									require a MATLAB license. This library should be installed within this folder:
+									/Applications/MATLAB/Matlab_Runtime/v93. If it is installed elsewhere on your computer please specify where it
+								is installed using the <a class="scrollto" href="#item-2-3">FIDELITI Preferences page</a>.</li>
+
+								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
+									   target="_blank">MATLAB Runtime Library R2021a (9.10)</a>. This runtime library is
+								required for the functional connectivity (CONN) standalone processing toolbox and does
+									not require a MATLAB license. This library should be installed within this folder:
+									/Applications/MATLAB/Matlab_Runtime/v910. If it is installed elsewhere on your computer please specify where it
+								is installed using the <a class="scrollto" href="#item-2-3">FIDELITI Preferences page</a></li>
+
+								<li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html" target="_blank">The FMRIB Software Library (FSL)</a>
+									is a powerful imaging software that is required for the white matter microstructure
+									processing pipeline. FSL can be installed using the default settings.</li>
+
+						 		<li><a href="https://www.mrtrix.org/" target="_blank">MRtrix3</a> is an advanced
+									white matter imaging tool that is required for the white matter microstructure pipeline and
+									for certain quality assessment tools. MRtrix3 can be installed using the default settings.</li>
+							</ul>
+
+						 </p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">Preference Settings</h2>
+						<p>When first starting out with the FIDELITI Dashboard, a few preferences need to be specified. Please see the
+						<a class="scrollto" href="#section-8">Preferences section</a> for more details.</p>
+
+							<ul><li><b>FIDELITI working folder</b> - This is the folder where the processed imaging files will be
+								saved on your system. By default, this is set to: /Desktop/FIDELITI. It can be updated in
+								<a class="scrollto" href="#section-8">Preferences</a>.</li>
+								<li><b>MATLAB Runtime folder</b> - Several toolboxes require the MATLAB Runtime libraries. By
+								default they are installed to /Applications/MATLAB/MATLAB_Runtime. However, if you have the
+								folders for v93 and v910 installed in a different folder, that folder needs to be specified
+								in <a class="scrollto" href="#section-8">Preferences</a>.</li>
+							</ul>
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">Running FIDELITI</h2>
+						<p>Once you have successfully installed the Dashboard and all the dependencies, you can simply double click
+						the FIDELITI icon in your Applications folder to open it. A terminal window will also open behind the Dashboard
+						main window. This terminal has informative information about processing and may contain useful error
+							messages if errors occur during processing. If you close this terminal window, the main Dashboard
+							window as well as any active processing sessions will also close. Feel free to minimise the terminal
+						window if you do not need it during your Dashboard session.</p>
+						<p>The first page you will see upon opening the Dashboard is the Home screen. This contains useful
+							information for users first starting with FIDELITI. The navigation wizard in the top right corner
+							can help to point out the next (and previous) steps in the work flow. Or you can work your way down
+							the navigation menu on the left side of the main window.</p>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+						      		<a href="assets/images/home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/home-thumb.png" alt="" title="Home"/></a>
+							</div><!--//col-->
+						</div><!--//gallery-->
+
+					</section><!--//section-->
+
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Participants</h1>
+					    <section class="docs-intro">
+						    <p>A participant is one individual person (aged between 5.5 and 22.0 years) that has been scanned at
+								least one time during an imaging session. Each participant should appear in the participant
+								list multiple times using the same ID if they have multiple imaging sessions (i.e., for a longitudinal study).
+								For each session, the age should be as close to the participants' age
+								at scan for maximal accuracy. FIDELITI stores demographic information for each participant
+								and session	in a participant session list. This table can be searched and sorted as needed
+								by clicking the column headings.</p>
+
+								<div class="simplelightbox-gallery row mb-3">
+									<div class="col-12 col-md-4 mb-3">
+						        		<a href="assets/images/participants.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/participants-thumb.png" alt="" title="Participants"/></a>
+									</div><!--//col-->
+								</div><!--//gallery-->
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">Participant Demographics</h2>
+						<p>To manually enter a participant session, click the Add Session button. To copy a session,
+							click on the session to copy and click the Copy Session button. This can be helpful for
+							entering several sessions for the same participant. To delete a session, click on the session
+							to be deleted and click the Delete Session button. Any changes must be saved by clicking the
+							Save Changes button. The Reload List button can be used to
+							discard any unwanted changes and revert to the previously saved list.</p>
+						 <p>Mandatory fields are indicated with a darker grey column heading. Demographics can be entered by clicking in each table cell and entering:
+							<ul>
+						 		<li><b>ID - Participant ID</b> (mandatory). Consider this ID the unique identifier for each
+							 participant that will identify them throughout the Dashboard. If a participant has multiple
+							 sessions (i.e., for a longitudinal study), the ID should be entered on multiple lines
+							 corresponding to each session but must be exactly the same for the data to be grouped
+							 properly on graphs and reports. If you prefer to keep all sessions separate for a given
+							 participant, then a suffix denoting the session can be added to the ID number to keep them
+							 unique. For example, S01-T1, S01-T2, S01-T3. Note that when entered this way, these sessions
+							will be treated as unique participants and multiple session data points will not be displayed on the same graph.</li>
+						 		<li><b>First Name and Last Name</b> (optional) - These fields are not required, they are included
+						 	only for your reference. Names can be changed for anonymization purposes. Note that names entered
+						 	here will appear on Dashboard summary reports.</li>
+						 		<li><b>Sex</b> (mandatory) - This is the biological sex of the participant and is entered as
+						 	M (male) or F (female). Sex is mandatory here for best accuracy because the normative models
+							 are stratified by sex. If you prefer to enter gender instead (i.e., if sex and gender are
+									different for a given participant), the gender should also be entered using M (male) or F (female).</li>
+						 		<li><b>Age</b> (mandatory) - Age is entered in years. Please ensure that this age is as close
+						 to the actual age at scanning (if it needs to be altered for anonymization purposes). Currently,
+						 children, adolescents, and young adults between the ages of 5.5 and 22.0 years can be accommodated in the Dashboard. As
+						 additional data is added in future releases, this age range may expand.</li>
+						 		<li><b>Project</b> (optional) - Project is not required, it has been included only for your reference.
+						 This field can be helpful for grouping when sorting your participant table.</li>
+						 		<li><b>Session Date</b> (optional) - The date of the imaging session is not mandatory and is
+						 included here for your reference. This field can be helpful when working with longitudinal data.</li>
+						 		<li><b>Session</b> (mandatory) - The Session Description is mandatory since it is used in the
+						 folder structure during processing to organize files. This description will also appear on the
+						 Dashboard reports. Please do not use spaces or special characters in this description.</li>
+					 		</ul>
+						 </p>
+
+						 	<div class="alert alert-info" role="alert">Note that any changes made to the information in this table needs to be saved using the
+							 Save Changes button before moving on to the next steps.</div>
+
+
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Imaging Files</h2>
+						<p>Imaging files can be entered here by clicking in the applicable cell and selecting the
+							corresponding file in nifti format (*.nii). Note that this file should be unzipped. This
+						means that files with the extension *.nii.gz should be converted to *.nii before importing. This is
+						easily done by double-clicking the zipped (*.nii.gz) in your Finder.</p>
+						<p>
+						<ul>
+						<li><b>T1 - T1-weighted image</b> (mandatory) - This single file is a high-resolution T1-weighted anatomical image.
+						The T1-weighted image is mandatory for all pipelines since it is a central part of pre-processing.
+						For best results, a resolution of 1 mm isotropic is best if possible. This file will also be used
+						in the cortical morphometry pipeline for extracting cortical thickess measurements and grey matter volumes.</li>
+						<li><b>RS - Resting State fMRI images</b> (optional) - This single file is a 4-dimensional resting
+						state functional MRI file that has beeen acquired while the participant was at rest or watching
+						a relaxing visual display. For best results, this file should contain at least 100 volumes, more
+						volumes if possible. This file is mandatory if using the resting state functional connectivity
+						pipeline.</li>
+						<li><b>DW - Diffusion-weighted images</b> (optional) - This single file is a 4-dimensional
+							diffusion-weighted imaging file containing at least six diffusion gradients, more if possible.
+						A single pair of *.bval and *.bvec files that define the gradient directions should be in FSL
+						format and should be located in the same directory. Note that the names of these bval and bvec
+							files do not matter, they just are required to have the file extensions .bval and .bvec.</li>
+					</ul></p>
+
+						<div class="alert alert-info" role="alert">Note that any changes made to the information in this table needs to be saved using the
+							 Save Changes button before moving on to the next steps.</div>
+
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">Dicom to Nifti Conversion</h2>
+						<p>If your imaging files are in dicom format (common when first extracted from the scanner),
+						they can be converted to nifti format here. First make sure the dicoms are organized into
+						separate folders (by sequence), then click one of the conversion buttons to select the folder.
+						The newly created nifti file will be named anat.nii, rs.nii, or dwi.nii according to the sequence and will
+						be saved in the dicom directory originally selected. This new *.nii file can then be selected
+						in the participant session list above for further processing.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-4">
+						<h2 class="section-heading">Importing Multiple Participants</h2>
+						<p>If you have an entire cohort of participants to enter, it can be helpful to use the batch
+							import functionality. This will require a *.csv file containing the demographic information
+							for each participant as well as the complete path to their imaging files. Once this file is
+						selected using the Select Import file button, the participants will be added to the participant
+						session list above. Make sure you click the Save Changes button to save your new participant
+						session list, or click the Reload List button to discard any changes.</p>
+						<p>The *.csv file must contain all column headings, however only the data for the mandatory
+							fields need to be entered.</p>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/import.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/import-thumb.png" alt="" title="Import Participants"/></a>
+							</div><!--//col-->
+						</div><!--//gallery-->
+
+						<div class="alert alert-info" role="alert">Note that the Save Changes button needs to be clicked
+							after importing a cohort to save the additions to the participant session table before moving on to the next steps.</div>
+
+					</section><!--//section-->
+
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Processing</h1>
+					    <section class="docs-intro">
+						    <p>Processing of imaging files is specified here. Processing of multiple files and participants
+							will proceed in parallel depending on your local system capabilities. The Processing page
+							is essentially a place to construct a "To Do" list of participants and sessions that are to be
+								processed. Once the list is constructed and saved, and the desired
+								pipelines are selected, processing is started by clicking the Run Processing button.</p>
+
+							<div class="simplelightbox-gallery row mb-3">
+									<div class="col-12 col-md-4 mb-3">
+						        		<a href="assets/images/processing.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/processing-thumb.png" alt="" title="Processing"/></a>
+									</div><!--//col-->
+							</div><!--//gallery-->
+
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-4-1">
+						<h2 class="section-heading">Processing Queue</h2>
+
+						 <p>The Processing Queue is a listing of the sessions you
+							wish to process. First, select a participant session in the Participant list on the left
+							side and using the rightward arrow button, add it to the To be processed listing. This
+							should be repeated for all sessions to be processed. Then click Save Changes. </p>
+
+						 <div class="simplelightbox-gallery row mb-3">
+							 <div class="col-12 col-md-4 mb-3">
+								 <a href="assets/images/queue.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/queue-thumb.png" alt="" title="Processing Queue"/></a>
+							 </div><!--//col-->
+							</div><!--//gallery-->
+
+						 <p>Note that selecting participants with the same available imaging files for the same batch is helpful here. For example,
+						selecting a participant with a missing diffusion file alongside others with diffusion files will
+						cause a "file missing" error when you select the diffusion pipeline in the next step. Instead,
+						 choose the participants with the same set of imaging to be processed in a single batch. Then,
+						 once that batch has been submitted for processing, construct a new batch of participants with
+						 matching imaging files to be submitted next. Subsequent batches can be submitted before the
+							 previous batches are finished processing and will be queued accordingly. Sessions will be processed
+						 in parallel depending on your system resources though if the batches are larger, some sessions will be processed serially.</p>
+						 <p>At this stage, please ensure that every participant session contains the mandatory
+							 information required (ID, Sex, Age, Session, T1 image). Note that this participant list is read only.
+							 To update participant information, return to the Participant page, update the information,
+						 save the changes and return to this page. If your participant does not appear in this listing, return
+							 to the Participants page and make sure that they have been successfully entered there and that
+							 all changes have been saved. Then return to this page. Your participant information should now appear here.</p>
+						 <p>To remove a participant session from the "To be processed" list, select the session and click the
+							 leftward arrow to remove it. Click Save Changes.</p>
+
+						 <div class="alert alert-info" role="alert">Note that the Save Changes button needs to be clicked
+							after constructing or changing your "To be processed" list before moving on to the processing preferences step.</div>
+
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-4-2">
+						<h2 class="section-heading">Processing Preferences</h2>
+						<p>Once the Processing Queue has been constructed, the desired pipelines can be selected. Note
+							that the Cortical Morphometry pipeline requires a high-resolution T1-weighted image. The
+							Functional Connectivity pipeline requires a high-resolution T1-weighted image AND a
+							4-dimensional resting state image containing at least 100 volumes. The White matter microstructure
+						pipeline requires a high-resolution T1-weighted image AND a diffusion-weighted image containing at
+						least six diffusion directions. Once you have selected the desired pipelines, click Run Processing
+						to start the processing. Processing proceeds in the background and you can still use the Dashboard
+						while this processing proceeds.</p>
+						<div class="alert alert-info" role="alert">If you close the Dashboard before the image processing is
+							complete, as long as you have not closed the terminal window, the processing will continue. To stop
+							all processing, close the terminal window. Note that unsaved changes will be lost.</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-4-3">
+						<h2 class="section-heading">Cortical Morphometry</h2>
+						<p>The Cortical Morphometry pipeline uses the Computational Anatomy Toolbox
+						(CAT12) for Statistical Parametric Mapping (SPM) running in Matlab to calculate cortical
+						morphometry metrics such as cortical thickness within atlas-based regions of interest and grey matter
+						volumes for various structures. More information about CAT12 can be found here: <a href="https://neuro-jena.github.io/cat/" target="_blank">CAT12</a>
+						</p>
+						<p><ul>
+							<li><b>Cortical thickness</b> - Extracted for regions based on the
+								<a href="https://neuro-jena.github.io/cat12-help/#FS_DK40" target="_blank">Desikan-Killiany (DK40) atlas</a>. </li>
+							<li><b>Grey matter volume</b> - Extracted for regions based on the
+								<a href="https://neuro-jena.github.io/cat12-help/#LPBA" target="_blank">LONI
+									Probabilistic Brain Atlas (LPBA40)</a> and the <a href="https://neuro-jena.github.io/cat12-help/#Thalamus" target="_blank">Thalamus atlas</a>.</li>
+						</ul></p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-4">
+						<h2 class="section-heading">Functional Connectivity</h2>
+						<p>The functional connectivity pipeline uses the <a href="https://web.conn-toolbox.org/" target="_blank">Connectivity Toolbox (CONN)</a>
+							for SPM running	within Matlab to calculate temporal cross correlations in fluctuations in blood
+							oxygen-level dependent (BOLD) response between regions of interest across the brain. Brain regions are
+						defined using the Harvard-Oxford Atlas and their functional connectivity is quantified using
+							Fisher-transformed Pearson correlation coefficients.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-5">
+						<h2 class="section-heading">White Matter Microstructure</h2>
+						<p>The white matter microstructure pipeline uses functions from <a href="https://www.mrtrix.org/" target="_blank">MRtrix3</a>
+							and <a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank">FSL</a> to calculate
+							fractional anisotropy across the brain to quantify the diffusion of water within white matter
+							structures of interest. These structures are defined via regions from the <a href="https://identifiers.org/neurovault.collection:264" target="_blank">Johns
+							Hopkins University (JHU) White Matter Atlas</a>.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-6">
+						<h2 class="section-heading">Custom Pipelines</h2>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/custom-single.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/custom-single-thumb.png" alt="" /></a>
+							</div><!--//col-->
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/custom-multiple.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/custom-multiple-thumb.png" alt="" /></a>
+							</div><!--//col-->
+						</div><!--//gallery-->
+
+						<p>If you would like to add participants that have already been pre-processed (perhaps with your own
+							customized processing pipeline), this functionality exists though is for advanced users. It is easiest
+						to start with existing datafiles from other pre-processed participants to make sure the formatting
+							and column headings are correct.
+							<ul><li><b>Single session</b> - Prepare your participants’ datafile containing cortical morphometry,
+							functional connectivity, and/or white matter microstructure
+							feature values in a single row in the format provided above (with all column names that match those existing in FIDELITI).
+							Save this file as a comma delimited .csv file in the Subjects folder of your working directory.
+							This working directory is specified in the FIDELITI <a class="scrollto" href="#section-8">Preferences page</a>. The
+							datafile must be named with your participant ID (ID.csv). Then, within the Subjects folder, create a participant folder with their ID.
+							Within this folder (Subjects/ID), save the same data file with the name ID_session.csv. Click on the first example
+						image above for an illustration.</li>
+						<li><b>Multiple sessions</b> - Prepare your participants’ datafile containing cortical morphometry,
+							functional connectivity, and/or white matter microstructure
+							feature values for each session in their own row in the format provided above (with all column names that match those existing in FIDELITI).
+							Save this file as a comma delimited .csv file in the Subjects folder of your working directory.
+							This working directory is specified in the FIDELITI <a class="scrollto" href="#section-8">Preferences page</a>. The
+							datafile must be named with your participant ID (ID.csv). Then, within the Subjects folder, create a participant folder with their ID.
+							Within this folder (Subjects/ID), save one data file per session each with only one row of data. Name these files ID_session.csv. Click on the second example
+						image above for an illustration.</li>
+							</ul></p>
+						<p>Once you have completed these steps, open FIDELITI and you should be able to select
+							and view your participant’s Dashboard in the Dashboard tab. We recommend using pipelines that
+							are similar to the ones supplied with the FIDELITI Dashboard to minimise differences between
+							your participants and the normative database that may be introduced by different processing pipelines.</p>
+						<p>For a complete listing of column
+							names (case-sensitive) that are required please refer to the <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a>
+							or Supplementary Table 1 from <a href="">Carlson et al (2026)</a>. All column headings (features) need to be included even if there is
+							no data associated with them. Note that	the order of the feature columns does not need to conform
+							to the order given here except for the first seven demographic columns. For longitudinal data,
+							include multiple rows where each row corresponds to an imaging session (and the session name and age changes accordingly).
+						</p>
+						<div class="alert alert-info" role="alert">Note that if the custom pre-processing pipeline differs too
+							much from the processing that has been done on the control data, then this will introduce systematic biases
+							in the deviation scores. For best results, use a similar processing pipeline as that used for the controls.</div>
+
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-7">
+						<h2 class="section-heading">Neuroimaging Feature List</h2>
+						<p>A full list of neuroimaging features is available in the Supplementary section <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a>.</p>
+					</section><!--//section-->
+
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-5">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Dashboard</h1>
+					    <section class="docs-intro">
+						    <p>The Dashboard page is the heart of FIDELITI and is where you will view your participants' results.</p>
+							<div class="simplelightbox-gallery row mb-3">
+								<div class="col-12 col-md-4 mb-3">
+						        		<a href="assets/images/dashboard.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/dashboard-thumb.png" alt="" title="Dashboard - Single Session"/></a>
+								</div><!--//col-->
+								<div class="col-12 col-md-4 mb-3">
+						        		<a href="assets/images/dashboard2.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/dashboard2-thumb.png" alt="" title="Dashboard - Multiple Sessions"/></a>
+								</div><!--//col-->
+								<div class="col-12 col-md-4 mb-3">
+						        		<a href="assets/images/dashboard3.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/dashboard3-thumb.png" alt="" title="Dashboard - Missing Data"/></a>
+								</div><!--//col-->
+							</div><!--//gallery-->
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">Participant Session and Profile Selection</h2>
+						<p>A listing of available participants and sessions is displayed on this page. Participants are
+							sorted by ID in this listing and have additional demographic information listed for your reference.
+							To view the Dashboard for a single participant session, locate your participant in the list,
+							roll down the arrow to expand the session list and click on the session of interest. Then select
+							the profile you would like to view (i.e., the functional domain) on the right side and click the View Dashboard
+							button just below. The Dashboard for that participant session and functional domain
+							will be displayed below. Click on the left example above for an illustration.</p>
+						 <p>For participants with multiple sessions, you can view features for all sessions on the same
+							 graph for comparison across time. Simply select the parent record above the multiple
+							 sessions, select the functional profile of interest, and click View Dashboard. For example,
+							 if a participant has five imaging sessions that have been successfully processed, then five
+							 red symbols should be displayed on each graph. Click on the centre example above for an illustration.</p>
+						 <p>If your participant only has partial data, for example has only been successfully processed through
+						 the cortical morphometry pipeline, then the graphs for other features for functional connectivity
+							 and white matter microstructure will still show blue and purple
+						 symbols but will not have red symbols. You will also see nan (not a number) instead of deviation
+						 scores in the top left corner of each graph that has missing data. These can just be disregarded.
+						 Click on the right example above for an illustration.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-5-2">
+						<h2 class="section-heading">FIDELITI Graphs</h2>
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/graph.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/graph-thumb.png" alt="" title="Example Graph - Longitudinal data"/></a>
+							</div><!--//col-->
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/graph2.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/graph2-thumb.png" alt="" title="Example Graph - Single session"/></a>
+							</div><!--//col-->
+						</div>
+						<p>FIDELITI Dashboard graphs are rich in information.</p>
+						<p><ul>
+						<li><b>Title</b> - The graph title contains the region(s) of interest that are being displayed in the graph.
+						These regions are determined by the various atlases that were defined during pre-processing.
+							For example, R PostCG is the postcentral gyrus in the right hemisphere. For functional connectivity,
+						there are two regions in the title which represent the two regions between which the connectivity
+						has been calculated. For example, R PreCG - R Caudate represents the functional connectivity between
+						the right precentral gyrus and the right caudate. For a complete listing of all features with descriptions,
+						please see the <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a> in the supplementary information section.</li>
+						<li><b>Y-axis</b> - The y-axis defines the neuroimaging feature and its native units. This will be
+						one of functional connectivity (units: r<sub>F</sub> Fisher-transformed Pearson correlation coefficient), grey matter volume (units: cm<sup>3</sup>),
+							cortical thickness (units: mm), or fractional anisotropy (white matter microstructure).</li>
+						<li><b>X-axis</b> - The x-axis is the age in years. Your participant will be plotted using the age
+						that was entered in the participant list. It is important to have this age as close as possible to
+						the participant's actual age at scanning (if it needs to be altered for anonymity) for maximal accuracy
+							of plotting and deviation score calculations.</li>
+						<li><b>Symbols</b> - The purple circles (females) and blue squares (males) on the graphs represent feature values for
+						a cross-sectional sample of typically developing controls. These symbols illustrate the trajectory of the feature values
+							across the age range and the two distributions are stratified by biological sex.</li>
+						<li><b>Regression lines</b> - Regression lines are fit using a piecewise regression function via
+							locally estimated scatterplot smoothing	(LOESS) calculated using the control data points for
+							females (purple) and males (blue) separately. Shaded areas represent the 95% confidence intervals
+						around each line of best fit.</li>
+						<li><b>Deviation scores</b> - Deviation scores define departures (residuals) between actual and predicted
+							feature scores and are expressed in native feature units (d), as z-scores (standard deviations (SD)
+							from the mean), and as percentiles based on the sex and age of the participant. For example, a
+							cortical thickness deviation (d) score is expressed in millimeters, and a functional connectivity
+							deviation score is expressed as a Fisher-transformed Pearson correlation coefficient. By contrast,
+							z-scores of both are expressed in SD from the mean of the distribution, and percentiles are expressed
+							as the proportion of scores falling below the participant’s feature score. If a participant has
+							multiple sessions, the deviation scores represent only the first session (i.e., the youngest age).
+							User-defined thresholds for displaying
+						these values in red can be specified in <a class="scrollto" href="#section-8">Preferences</a>. More
+							information on how to export deviation scores can be found in the
+							<a class="scrollto" href="#item-5-4">Export Deviation Scores</a> section. Note that if these deviation
+						scores appear as "nan" (not a number), this indicates that this participant does not have successfully
+						processed data for this neuroimaging feature. For example, if no diffusion imaging is available, the
+						white matter microstructure graphs will not have any red symbols and will have "nan" displayed for deviation scores for the
+						white matter graphs but red symbols and deviation scores may be present for the other cortical thickness, grey matter volume, and functional
+							connectivity graphs.</li>
+						<li><b>Participant results</b> - Results for the current participant are displayed using red symbols
+							where the shape reflects the sex (circle - female, square - male). The range of the
+							y-axis will auto-calculate to accommodate a wide range of participant feature values. For a single imaging session,
+						just one red symbol will be displayed. For multiple sessions, more than one red symbol each representing one time point will be displayed.
+						If the imaging sessions were performed when the participant was of similar ages, there may be overlap
+						between the symbols. If no symbols are displayed, this may indicate missing data. Check in the participant
+							folder to see if the processing has completed correctly.</li>
+					</ul></p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-5-3">
+						<h2 class="section-heading">Summary Report</h2>
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/report.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/report-thumb.png" alt="" title="FIDELITI Summary Report"/></a>
+							</div><!--//col-->
+						</div>
+						<p>A PDF version of a participant's Dashboard can be saved in the form of a Summary Report by clicking the View
+							Summary Report button. Just as in the Dashboard, if a single session is selected in the session listing,
+						only that single session will be included in the Summary Report. If the master participant record is
+						selected, all sessions will be included in the report. Also, the profile you currently have selected
+							will be used to generate the report. Once viewing the report, save it using the File/Save as
+						menu option in your PDF viewer. Note that reports are not automatically saved to preserve space on your system and will
+							be overwritten each time the View Summary Report button is pressed unless each one is manually saved to
+							another location.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-5-4">
+							<h2 class="section-heading">Export Deviation Scores</h2>
+						<p>Deviation scores can be exported to a .csv file for later analysis by clicking the Export Deviation
+							Scores button. If you have selected a single session, the deviation scores for that session will
+						be saved to that session folder for your participant. If you are clicked on the master record for your
+						participant, all deviation scores for all sessions will be saved to each of the session folders for your
+						participant. Note that the functional domain (profile) currently selected is ignored and all deviation scores
+						for all neuroimaging features are included in these files. The files are saved separately for each type of deviation score, and
+							which types of deviation scores that are saved when you click this button can be specified in <a class="scrollto" href="#section-8">Preferences</a>.</p>
+						<ul><li><b>d scores</b> - filename: ID_session_d.csv</li>
+						<li><b>z scores</b> - filename: ID_session_z.csv</li>
+						<li><b>Percentiles</b> - filename: ID_session_pct.csv</li></ul>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-5-5">
+							<h2 class="section-heading">Quality Assessment</h2>
+						<p>Quality checking the image processing is a very important step. There are multiple methods provided in the Dashboard.</p>
+						<ul><li><b>View Anatomy</b> - The View anatomy button will display the original T1-weighted anatomical
+							image that was entered in the participant list. This image opens with MRview, an image viewer that is
+						part of the MRtrix3 package. Please ensure you have
+							<a href="https://www.mrtrix.org/download/" target="_blank">installed MRtrix3</a> to use this functionality. Navigate
+						around the T1 image by clicking, zooming, and using the menu options. More information can be found in the
+						<a href="https://www.mrtrix.org/" target="_blank">MRtrix3 documentation</a>.</li>
+						<li><b>Check Cortical Morphometry</b> - This button will open the CAT12 report that resulted from
+						processing data through the cortical morphometry pipeline which contains useful image quality and tissue segmentation information.
+						For more information on the CAT12 report please <a href="https://neuro-jena.github.io/cat12-help/#qc" target="_blank">see their documentation</a>.
+						This report can also be found in the Subjects/participant/session/CAT12/report folder.</li>
+						<li><b>Check Functional Connectivity</b> - The Check Functional Connectivity button opens a carpet plot
+						illustrating head motion before and after denoising. This image is generated by the CONN toolbox and contains
+						useful information on head motion and outliers that may affect data quality. For more information on CONN,
+						<a href="https://web.conn-toolbox.org/resources/conn-documentation/manual" target="_blank">see their documentation here</a>.
+							This image can also be found in the
+							Subjects/participant/session/CONN/FIDELITI_FC/results/qa folder along with an image illustrating
+						the quality of the normalization process.</li>
+						<li><b>Check White Matter</b> - The Check White Matter button opens an MRview window with the participant's
+							fractional anisotropy (FA) map displayed. MRview is part of the MRTrix3 package so ensure you have <a href="https://www.mrtrix.org/download/" target="_blank">MRtrix3 installed</a> on your system.
+							Overlaid on the FA map are the warped JHU white matter regions of
+						interest that have been used to extract the median FA value for each region. Diffusion scans are inherently
+						lower resolution than the high-resolution T1-weighted images and so this image may appear "blocky". Use the
+						Tool/ROI editor to view the names of the ROIs displayed.</li></ul>
+					</section><!--//section-->
+
+			    </article><!--//docs-article-->
+			    
+			    
+		        <article class="docs-article" id="section-6">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Demonstration</h1>
+					    <section class="docs-intro">
+						    <p>A demonstration page has been provided for those users who have not yet processed their own data.
+							This demonstration illustrates the Dashboard graphs and different profiles available on the
+								Dashboard page for your participants once you have
+								successfully processed your own data. The participants included here are typically developing
+								controls of varying ages. For more details on profiles and graphs, please refer to
+								the <a class="scrollto" href="#section-5">Dashboard help section</a>.</p>
+							<div class="simplelightbox-gallery row mb-3">
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/demo.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/demo-thumb.png" alt="" title="Demonstration Page"/></a>
+								</div><!--//col-->
+							</div>
+						</section><!--//docs-intro-->
+				    </header>
+
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-7">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Profiles</h1>
+					    <section class="docs-intro">
+						    <p>The FIDELITI Dashboard has a number of pre-defined profiles that are available for viewing
+								functional domains of interest, such as sensorimotor, language, and more. The profiles page
+							allows users to customise existing profiles as well as create new profiles if desired. We recommend
+							copying an existing profile and editing it to start with. For a complete listing of all the neuroimaging
+							features available, please see the <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a>.</p>
+							<div class="simplelightbox-gallery row mb-3">
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/profiles.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/profiles-thumb.png" alt="" title="Profiles Page"/></a>
+								</div><!--//col-->
+							</div>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-7-1">
+						<h2 class="section-heading">Profile List</h2>
+						<p>The Profile List contains a listing of all profiles that are currently available in the Dashboard.
+						To add a new profile, select an existing profile and click Duplicate Selected Profile. Enter the name
+							and description of the new Profile then click Save Changes. You can then scroll down to the Profile
+							Edit area to edit the neuroimaging features that are displayed in the profile when viewing the Dashboard.
+							If you prefer to start from a blank profile, click the Add Blank Profile button instead, enter
+							the new name and description, and click Save Changes. To delete an existing profile, select the profile you wish to
+						delete and click Delete Profile. The Save Changes button must be clicked for any profile list changes to be saved.</p>
+						 <div class="alert alert-info" role="alert">Note that the Save Changes button needs to be clicked when
+							 any changes are made to the profiles listing for those changes to be saved.</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-7-2">
+						<h2 class="section-heading">Profile Edit</h2>
+						<p>To change the contents of a profile, first select it in the Profile List. Then edit the neuroimaging
+						features you wish to appear within that profile. When finished editing, click the Save Profile Changes
+						button.</p>
+						<div class="alert alert-info" role="alert">Having a profile with too many neuroimaging features can
+						become unwieldy. It is best to have smaller numbers of features in multiple profiles.</div>
+					</section><!--//section-->
+
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-8">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Preferences</h1>
+					    <section class="docs-intro">
+						    <p>The Preferences page allows users to set a number of preference settings that will be used for
+							all Dashboard sessions. Be sure to click Save Preferences if you update any of the settings here.</p>
+							<div class="simplelightbox-gallery row mb-3">
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/preferences.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/preferences-thumb.png" alt="" title="Preferences Page"/></a>
+								</div><!--//col-->
+							</div>
+
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-8-1">
+						<h2 class="section-heading">MATLAB Runtime Directory</h2>
+						<p>The cortical morphometry and functional connectivity pipelines both use toolboxes that require
+							MATLAB Runtime to be installed (no MATLAB License is required). By default, the MATLAB Runtime libraries are installed
+							in the folder: /Applications/MATLAB/MATLAB_Runtime.
+						However, if you have the folders for v93 and v910 installed in a different folder, that folder needs
+						to be specified here. Click the Select Directory button to specify the MATLAB Runtime folder. Then click
+						Save Preferences.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-8-2">
+						<h2 class="section-heading">FIDELITI Working Directory</h2>
+						<p>During image processing, the Dashboard needs to save processed files and summary results to a folder
+							on your system. By default, this is Desktop/FIDELITI. If you would like your participants' processed
+							imaging folders and data files to be saved somewhere else, please click the Select Directory button
+						and select this folder here. Then click	Save Preferences.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-8-3">
+							<h2 class="section-heading">Deviation Score Settings</h2>
+						<p>Deviation score thresholds determine the value at which z-score and percentile values are displayed
+							in red on each dashboard graph. For example, setting a lower z-score threshold of -3.1 would display
+							a red z-score for any values lower than 3.1 standard deviations below the mean and black z-scores
+							for other values that do not exceed this threshold (e.g., z=-2.4). For percentiles, the threshold defines the
+							percentile point under which the percentile value is displayed in red (e.g., 15th percentile).
+							If you prefer to not use thresholds (and keep the deviation scores always displayed in black), uncheck the
+							Use deviation score thresholds box.</p>
+						<p>Export deviation scores checkboxes specify which deviation scores will be exported (as .csv files)
+							if you wish to perform further processing using these values. If these
+						checkboxes are all checked, then clicking the Export Deviation Scores button on the Dashboard page will
+						save three .csv files to the FIDELITI working directory (specified above) /Subjects/ID/session
+							folder. For example, by default these files would be saved to: /Desktop/FIDELITI/Subjects/ID/session.</p>
+						<ul><li><b>d scores</b> - filename: ID_session_d.csv</li>
+							<li><b>z-scores</b> - filename: ID_session_z.csv</li>
+							<li><b>percentiles</b> - filename: ID_session_pct.csv</li></ul>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-8-4">
+							<h2 class="section-heading">Resting State fMRI Settings</h2>
+						<p>Resting state processing settings can be specified here. Specifically the repetition time (TR) in seconds,
+						the smoothing kernel in mm, and the slice timing correction setting (drop down list). Note that these
+						settings should be set for your data before the processing starts.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-8-5">
+							<h2 class="section-heading">Scanner Harmonization</h2>
+						<p>Harmonization procedures attempt to reduce the effects of different scanners and sequences in
+							multi-site data by statistically transforming one dataset to more closely resemble a reference
+							dataset while at the same time conserving individual biological variability. The FIDELITI Dashboard uses
+							Neurocombat to harmonize between the scanners. For more information on how this was done, please
+							refer to <a href="">Carlson et al (2026)</a>. For more information on Neurocombat, please see
+							<a href="https://pubmed.ncbi.nlm.nih.gov/28826946/" target="_blank">Fortin et al. (2017)</a>
+						and <a href="https://github.com/Jfortin1/neuroCombat" targer="_blank">neuroCombat</a>.</p>
+						<p>The Alberta Children's Hospital (ACH) scanner is a 3T GE MR750w, similar to scanners found in research settings.
+							The Human Connectome Project - Development (HCD) scanners are 3T Siemens Prisma scanners customized
+							for the HCD Project. We recommend that you choose the option where the reference most closely resembles
+							your scanner and scanning protocol. The default is to use the ACH scanner as the reference since it
+						may be closer to a typical research scanner found in hospital and university settings, however other
+						options are available. </p>
+
+						<div class="alert alert-info" role="alert">Note that the deviation scores will change for every participant and every
+						neuroimaging feature if the harmonization option is changed so be sure to select the desired option
+							before you analyze your data. If you need to update it after you have processed your imaging, you can
+						simply export all the deviation scores again for each participant and the value in the new .csv files will
+							reflect deviation scores based on the new harmonized distributions.</div>
+
+					</section><!--//section-->
+
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-9">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Frequently Asked Questions (FAQs)</h1>
+					    <section class="docs-intro">
+						    <p>Frequently asked questions from our users have been answered here.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-9-1">
+						<h2 class="section-heading">Installation</h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Do I need a MATLAB Licence?</h5>
+						 <p>No MATLAB license is required though two MATLAB Runtime libraries are required for full functionality.
+						 Please see the Installation <a class="scrollto" href="#item-2-2">Dependencies</a> documentation for information
+						 on the MATLAB Runtime libraries required (v93 and v910). Also see the <a class="scrollto" href="#section-8">Preference Settings</a> for
+						 information on how to specify the MATLAB Runtime Library folder.</p>
+
+						 <h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Do I need both MATLAB Runtime Libraries or can I just install one?</h5>
+						 <p>Both MATLAB Runtime libraries are required for full pipeline functionality. Specifically, version v93 is
+							 required for the cortical morphometry (CAT12) processing pipeline and version v910 is required for
+							 the functional connectivity (CONN) pipeline. If either are missing, you will not be able to run
+							 these pipelines on your participant. Please see the <a class="scrollto" href="#item-2-2">Dependencies</a>
+							 documentation for information.</p>
+
+					 </section><!--//section-->
+					
+					<section class="docs-section" id="item-9-2">
+						<h2 class="section-heading">Processing</h2>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why does my participant session not appear in the Participant list on the Processing page?</h5>
+						<p>If your participant does not appear in this listing, return to the Participants page and make sure
+							that your participant has been successfully entered there and that all changes have been saved. Then return
+							to the Processing page to work with the participant.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why can’t I edit my participant in the processing queue?</h5>
+						<p>Note that the participant list in the Processing page is read only. To update participant information,
+							return to the Participants page,	update the information, save the changes, and return to the Processing page.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I submit more than one batch to the processing queue?</h5>
+						<p>Yes more than one batch can be submitted at the same time. Choosing participants with the same set of imaging to be processed
+							in a single batch is helpful to avoid errors. Then, once that batch has been submitted for processing,
+							construct a new batch of participants with matching imaging files to be submitted next. Subsequent
+							batches can be submitted before the previous batches are finished processing and will be queued
+							accordingly depending on your system capabilities.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I run more than one participant/pipeline at the same time?</h5>
+						<p>Yes, you can run more than one participant session and more than one imaging modality pipeline at the same time.
+							This is typically done in batches via the Processing page. Depending on your system, the jobs will
+							run in parallel where possible. Therefore, you may see multiple MATLAB applications open in the background
+							at the same time. Running too many jobs at the same time will degrade your system’s performance
+							for other tasks and so we recommend not running too many participants and sessions at the same time (e.g., <10 sessions).</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I do other things within the dashboard while pipeline processing is running?</h5>
+						<p>Yes, you can navigate around the Dashboard and view other pages while the processing is running.
+							You can also prepare and submit other batches for processing which will be queued accordingly depending
+							on the capacity of your system. If you close the background terminal window, the pipeline processing will stop.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>I closed the Dashboard main window while processing was running, will it still finish?</h5>
+						<p>If the Dashboard main window is closed during processing, the jobs will continue in the background.
+							If the terminal window is closed, the processing will stop. Note that all unsaved changes will be lost.
+							Please reopen the Dashboard and restart the processing if it does not complete correctly. You can
+							still navigate around inside the Dashboard while the processing is running, just don’t close the
+							terminal window. Minimizing the main FIDELITI window and terminal while processing participant data is also fine,
+							processing will continue.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How do I know when data processing is finished?</h5>
+						<p>When the data processing is completed, your participant will have an ID.csv file in their Subjects folder
+							within the working directory on your computer (check where this working directory is in
+							the <a class="scrollto" href="#item-8-2">Preferences</a> page)
+							and will also be selectable in the list menu on the Dashboard page of FIDELITI. If your participant
+							does not appear in this list, click the Refresh List button. If they still do not appear, check
+							that all applicable imaging files were correctly specified in the Participants page and that there
+							are no errors in the terminal processing window.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why do I get the error: Image is not in NIFTI-1.1 format?</h5>
+						<p>Please ensure that all your *.nii files have been unzipped, i.e., they are not in *.nii.gz format.
+							This can typically be done in MacOS by double-clicking the file in Finder to unzip. Then re-enter
+							the file into the Participants page.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>If I re-run the same participant with the same ID and session, will my previous results be overwritten?</h5>
+						<p>Yes, if you use the same ID and session the previous results will be overwritten.</p>
+
+
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-9-3">
+							<h2 class="section-heading">Dashboard</h2>
+						    <h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why does my participant not appear in the Dashboard list?</h5>
+						<p>If your participant does not appear in the Dashboard list, it could be that the processing is not yet complete.
+							Try clicking the Refresh List button. If they still do not appear, this usually means that no
+							processing has been successfully completed for them or it is still processing. Please return to the Participants page and
+							ensure that the appropriate imaging files are specified for your participant and that they have been saved.
+							Then proceed to the Processing page, delete and re-add your participant to the “to be processed” queue,
+							select your pipeline(s) of choice with the checkboxes at the bottom, and click “Run Processing”.
+							Once the processing has successfully finished, return to the Dashboard page and click the Refresh
+							List button and your participant should now appear in the dashboard listing.</p>
+
+							<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>In my participant’s Dashboard, why are there no red symbols in some of the graphs?</h5>
+						<p>If you do not see your participant’s data in their dashboard (i.e., there are no red symbols on some
+							of the graphs), that usually means that either your participant has no imaging feature data for that modality
+							(i.e., a missing imaging file), or the processing for that imaging modality has not yet been completed.
+							Please check that you have processed your participant’s data through that pipeline (functional connectivity,
+							cortical morphometry, white matter microstructure) and then access the dashboard page again.</p>
+
+							<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How are the regression lines in the Dashboard graphs calculated?</h5>
+						<p>The regression lines are calculated using a LOESS regression model (locally estimated scatterplot smoothing).
+							A LOESS model uses a least-squares regression to locally fit a smooth curve through complex data
+							without making any assumptions as to the underlying data distribution. This means that the LOESS
+							model is non-parametric therefore robust to outliers and also allows the calculation of confidence
+							intervals around the mean. Each of the two regression lines (purple - female, blue - male) are
+						calculated using feature values from the reference cohort based on age and sex. For more information on
+						the regression calculations, please see <a href="">Carlson et al. (2026)</a>.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What do the numbers represent in the upper left corner of the Dashboard graphs?</h5>
+						<p>There are three values in the upper left corner of each Dashboard graph. </p>
+						<ul><li>A <b>d-score, or deviation score </b>,
+							is the difference between your participant’s score and the expected score from the regression line
+							calculated using age- and sex-matched control participants. This d-score is expressed in native neuroimaging
+							feature units. For example, for a 10.2 year-old male, if the expected value for functional connectivity
+							between right and left hippocampi is 0.65 and your participant has a FC value for 0.20 then their
+							deviation score is –0.45. The negative denotes that your participant’s score is lower than the expected
+							value for control participants. d-scores are expressed in y-variable units, for example, a d-score
+							of +1.2 for hippocampal volume means that your participant has a hippocampal volume that is 1.2 cm<sup>3</sup>
+							higher than the estimated group mean for age- and sex-matched typically developing peers. </li>
+							<li>The second value is the deviation <b>z-score</b> expressed in standard deviations from the mean. For example, if a
+							participant has a positive z-score of 0.95 this means that they fall 0.95 standard deviations above
+							the expected value for their age and sex. If this value is negative, for example z=-1.27, it means
+							that the participant’s score falls 1.27 standard deviations below the expected value.</li>
+							<li>The last value is a <b>percentile score</b>. This value expresses the proportion of scores in the normative cohort
+							that the current participant falls above if they were rank-ordered. For example, if the participant
+							has a functional connectivity percentile value of 37.9%, this means that their functional connectivity
+								value is higher than 37.9% of the typically developing sample.</li></ul></p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why is my participant’s d-score "nan"?</h5>
+						<p>If you see a d=nan (not a number) in the top left corner of a graph, this typically means that there
+							is no data on which to calculate a deviation score for your participant., i.e., either the pipeline
+							has not successfully been completed successfuly or this participant has missing imaging files.
+							Please ensure that the applicable pipeline has been run successfully for your participant and
+							then reload their dashboard. If there is no imaging file corresponding to this modality then these
+							"nan" values can be disregarded.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why do I get this error: Extrapolation not allowed with blending?</h5>
+						<p>This error has likely occurred because your participant’s age is outside the range for our reference
+							cohort and extrapolation outside of this range has not been enabled. The reference cohort ranges
+							are detailed in <a href="">Carlson et al (2026)</a> for each sex and imaging modality but generally
+							participants must be between 5.5 and 22 years of age.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What output files and folders are saved during processing?</h5>
+						<p>The FIDELITI Dashboard exports many files during processing, most of which conform to the output formats
+							for the CAT12 and CONN toolboxes. The main data files that are of interest and are also used for
+							the dashboard plots are listed below. Files are saved to a folder called Subjects in the
+							<a class="scrollto" href="#item-8-2">FIDELITI Working Directory</a> specified in the Preferences page.
+						Some files are saved to the session folder within the participant folder if they are session-specific.</p>
+
+							<ul><li><b>ID.csv</b> - This file is named using your participant ID number and contains
+								the neuroimaging feature values extracted for each successfully processed pipeline. For a participant
+								with a single session, this file will have one row of feautre values. For a participant with
+								multiple sessions, there will be multiple rows where each one corresponds to a session.	Also
+								included is the demographic information that is used to plot the participant in the neuroimaging
+								feature graphs (ID, age, sex).</li>
+								<li><b>session folders</b> - Within the subject directory are session directories named using
+									the session descriptions entered in the Participants page. These directories contain the
+									original imaging files provided as well as the processed files.</li>
+								<li><b>ID_session_CAT.csv</b> - This file contains the cortical morphometry (CAT12) neuroimaging
+									feature values only for a single session and is found in the session directory.</li>
+								<li><b>ID_session_CONN.csv</b> - This file contains the functional connectivity (CONN) neuroimaging
+									feature values only for a single session and is found in the session directory.</li>
+								<li><b>ID_session_WM.csv</b> - This file contains the white matter microstructure neuroimaging
+									feature values only for a single session and is found in the session directory.</li>
+								<li><b>CAT12, CONN, and WM folders</b> found within the session folders contain processed files
+									from each participant.</li>
+								<li><b>ID_session_d.csv</b> - This file contains the deviation scores for all neuroimaging
+									feature values for a single session and is found in the session directory.</li>
+								<li><b>ID_session_z.csv</b> - This file contains the z-scores for all neuroimaging
+									feature values for a single session and is found in the session directory.</li>
+								<li><b>ID_session_pct.csv</b> - This file contains the percentile scores for all neuroimaging
+									feature values for a single session and is found in the session directory.</li></ul>
+						<p>Note that these last three deviation score (ID_session_*.csv) files are only saved if they are checked in the
+							<a class="scrollto" href="#item-8-3">Deviation Score Settings</a> on the Preferences page and if the Export Deviation Scores button has been clicked in the Dashboard page.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+
+				<article class="docs-article" id="section-10">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Supplementary Information</h1>
+					    <section class="docs-intro">
+							<p></p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-10-1">
+						<h2 class="section-heading">How to cite the FIDELITI Dashboard</h2>
+						 <p>If you wish to cite the FIDELITI Dashboard, please use the folowing information:</p>
+						 <p>Carlson HL, Hassett JD, Hilderley AJ, Maiani M, Romanow N, Craig BT, Forkert N, Kirton A (2026).
+							 Fingerprinting individual differences in lesion impact through imaging: The FIDELITI Dashboard,
+							 a personalized dashboard for brain health.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-10-2">
+						<h2 class="section-heading">Funding Sources</h2>
+						<p>We thank the participants and families that volunteered to be control participants in this research. </p>
+						<p>The original development of the FIDELITI Dashboard was kindly supported by a Project grant from
+							the Cerebral Palsy Alliance Research Foundation. Additional funding for the expansion of the
+							project to longitudinal data was provided by the Heart and Stroke Foundation of Canada via a
+							Grant-in-Aid. We sincerely thank our funding sources for making this work possible. </p>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 ">
+						        <img style="width:350px;" src="assets/images/cparf.png" alt="" title="CP Alliance Research Foundation"/>
+							</div><!--//col-->
+							<div class="col-12 col-md-4 ">
+						        <img style="width:300px;" src="assets/images/hsf.png" alt="" title="Heart and Stroke Foundation"/>
+							</div><!--//col-->
+						</div><!--//gallery-->
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-10-3">
+						<h2 class="section-heading">Neuroimaging Feature List</h2>
+						<p>A full list of neuroimaging features available within the FIDELITI Dashboard is below.
+							There are over 150 features available.
+							Features are sorted by functional domain and by imaging modality where FC - Functional
+							connectivity, GMV - grey matter volume, CT - cortical thickness, WM - white matter microstructure.
+						L - left hemisphere, R - right hemisphere, FA - fractional anisotropy, Fasc - fasciculus. This table is also available
+						in <a href="">Carlson et al (2026)</a> as Supplementary Table S1.</p>
+
+						<p><h3>Sensorimotor Domain (30 features)</h3></p>
+							<div class="table-responsive my-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">Feature Description</th>
+										<th scope="col">Imaging Modality</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">RPreCG-LPreCG</td>
+										<td>L Precentral gyrus – R Precentral gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LPreCG-LPostCG</td>
+										<td>L Precentral gyrus - L Postcentral gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPreCG-RPostCG</td>
+										<td>R Precentral gyrus - R Postcentral gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LPreCG-LSMA</td>
+										<td>L Precentral gyrus - L Supplementary Motor Area</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPreCG-RSMA</td>
+										<td>R Precentral gyrus - R Supplementary Motor Area</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LPreCG-LThal</td>
+										<td>L Precentral gyrus - L Thalamus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPreCG-RThal</td>
+										<td>R Precentral gyrus - R Thalamus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LPreCG-LPut</td>
+										<td>L Precentral gyrus - L Putamen</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPreCG-RPut</td>
+										<td>R Precentral gyrus - R Putamen</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LPreCG-LCaud</td>
+										<td>L Precentral gyrus - L Caudate</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPreCG-RCaud</td>
+										<td>R Precentral gyrus - R Caudate</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPostCG-LPostCG</td>
+										<td>L Postcentral gyrus - R Postcentral gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LPostCG-LThal</td>
+										<td>L Postcentral gyrus - L Thalamus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPostCG-RThal</td>
+										<td>R Postcentral gyrus - R Thalamus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lPrcG</td>
+										<td>L Precentral gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rPrcG</td>
+										<td>R Precentral gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lPoCG</td>
+										<td>L Postcentral gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rPoCG</td>
+										<td>R Postcentral gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lCau</td>
+										<td>L Caudate</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rCau</td>
+										<td>R Caudate</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lPut</td>
+										<td>L Putamen</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rPut</td>
+										<td>R Putamen</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmvth_lVentral_Anterior</td>
+										<td>L Ventral Anterior Thalamus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmvth_rVentral_Anterior</td>
+										<td>R Ventral Anterior Thalamus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lprecentral</td>
+										<td>L Precentral gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rprecentral</td>
+										<td>R Precentral gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lpostcentral</td>
+										<td>L Postcentral gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rpostcentral</td>
+										<td>R Postcentral gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_cst_l_fa</td>
+										<td>L Corticospinal tract FA</td>
+										<td>WM</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_cst_r_fa</td>
+										<td>R Corticospinal tract FA</td>
+										<td>WM</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+
+						<p><h3>Language Domain (30 features)</h3></p>
+							<div class="table-responsive my-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">Feature Description</th>
+										<th scope="col">Imaging Modality</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">LANG_L_IFG-LANG_R_IFG</td>
+										<td>L Inferior Frontal gyrus - R Inferior Frontal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LANG_L_IFG-LANG_L_pSTG</td>
+										<td>L Inferior Frontal gyrus - L Posterior Superior Temporal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LANG_R_IFG-LANG_R_pSTG</td>
+										<td>R Inferior Frontal gyrus - R Posterior Superior Temporal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LANG_L_pSTG-LANG_R_pSTG</td>
+										<td>L Posterior Superior Temporal gyrus - R Posterior Superior Temporal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lInfFroG</td>
+										<td>L Inferior Frontal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rInfFroG</td>
+										<td>R Inferior Frontal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lSupTemG</td>
+										<td>L Superior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rSupTemG</td>
+										<td>R Superior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lMidTemG</td>
+										<td>L Middle Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rMidTemG</td>
+										<td>R Middle Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lInfTemG</td>
+										<td>L Inferior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rInfTemG</td>
+										<td>R Inferior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lSupMarG</td>
+										<td>L Supramarginal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rSupMarG</td>
+										<td>R Supramarginal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lparsopercularis</td>
+										<td>L pars opercularis</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rparsopercularis</td>
+										<td>R pars opercularis</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lparstriangularis</td>
+										<td>L pars triangularis</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rparstriangularis</td>
+										<td>R pars triangularis</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lparsorbitalis</td>
+										<td>L pars orbitalis</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rparsorbitalis</td>
+										<td>R pars orbitalis</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lsuperiortemporal</td>
+										<td>L Superior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rsuperiortemporal</td>
+										<td>R Superior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lmiddletemporal</td>
+										<td>L Middle Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rmiddletemporal</td>
+										<td>R Middle Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_linferiortemporal</td>
+										<td>L Inferior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rinferiortemporal</td>
+										<td>R Inferior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lsupramarginal</td>
+										<td>L Supramarginal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rsupramarginal</td>
+										<td>R Supramarginal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_slf_l_fa</td>
+										<td>L Superior Longitudinal Fasc. FA</td>
+										<td>WM</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_slf_r_fa</td>
+										<td>R Superior Longitudinal Fasc. FA</td>
+										<td>WM</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+
+						<p><h3>Vision Domain (31 features)</h3></p>
+							<div class="table-responsive my-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">Feature Description</th>
+										<th scope="col">Imaging Modality</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">VIS_Med-VIS_Occ</td>
+										<td>Visual Network medial - Visual Network Occipital</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">VIS_Med-VIS_L_Lat</td>
+										<td>Visual Network medial - L Visual Network lateral</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">VIS_Med-VIS_R_Lat</td>
+										<td>Visual Network medial - R Visual Network lateral</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">VIS_Occ-VIS_L_Lat</td>
+										<td>Visual Network Occipital - L Visual Network lateral</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">VIS_Occ-VIS_R_Lat</td>
+										<td>Visual Network Occipital - R Visual Network lateral</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">VIS_L_Lat-VIS_R_Lat</td>
+										<td>L Visual Network lateral - R Visual Network lateral</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">gmvth_lPulvinar</td>
+										<td>L Pulvinar</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmvth_rPulvinar</td>
+										<td>R Pulvinar</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lLinG</td>
+										<td>L Lingual gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rLinG</td>
+										<td>R Lingual gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lFusG</td>
+										<td>L Fusiform gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rFusG</td>
+										<td>R Fusiform gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lSupOccG</td>
+										<td>L Superior Occipital gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rSupOccG</td>
+										<td>R Superior Occipital gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lMidOccG</td>
+										<td>L Middle Occipital gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rMidOccG</td>
+										<td>R Middle Occipital gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lInfOccG</td>
+										<td>L Inferior Occipital gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rInfOccG</td>
+										<td>R Inferior Occipital gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lCun</td>
+										<td>L Cuneus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rCun</td>
+										<td>R Cuneus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">th_llingual</td>
+										<td>L Lingual gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rlingual</td>
+										<td>R Lingual gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lfusiform</td>
+										<td>L Fusiform gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rfusiform</td>
+										<td>R Fusiform gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_llateraloccipital</td>
+										<td>L Lateral Occipital gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rlateraloccipital</td>
+										<td>R Lateral Occipital gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lcuneus</td>
+										<td>L Cuneus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rcuneus</td>
+										<td>R Cuneus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_ptr_l_fa</td>
+										<td>L Posterior Thalamic Radiations FA</td>
+										<td>WM</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_ptr_r_fa</td>
+										<td>R Posterior Thalamic Radiations FA</td>
+										<td>WM</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_ccsplenium_fa</td>
+										<td>Splenium FA</td>
+										<td>WM</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+
+						<p><h3>Attention and Executive Function Domain (33 features)</h3></p>
+							<div class="table-responsive my-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">Feature Description</th>
+										<th scope="col">Imaging Modality</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">FPN_L_LPFC-FPN_L_PPC</td>
+										<td>Frontoparietal network L Lateral Prefrontal cortex - L Posterior Parietal cortex</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">FPN_L_LPFC-FPN_R_LPFC</td>
+										<td>Frontoparietal network L Lateral Prefrontal cortex - R Lateral Prefrontal cortex</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">FPN_L_PPC-FPN_R_PPC</td>
+										<td>Frontoparietal network L Posterior Parietal cortex - R Posterior Parietal cortex</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">FPN_R_LPFC-FPN_R_PPC</td>
+										<td>Frontoparietal network L Lateral Prefrontal cortex - R Posterior Parietal cortex</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">DAN_L_FEF-DAN_R_FEF</td>
+										<td>Dorsal Attention Network L Frontal Eye Field - R Frontal Eye Field</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">DAN_L_FEF-DAN_L_IPS</td>
+										<td>Dorsal Attention Network L Frontal Eye Field - L Intraparietal sulcus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">DAN_R_FEF-DAN_R_IPS</td>
+										<td>Dorsal Attention Network R Frontal Eye Field - R Intraparietal sulcus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">DAN_L_IPS-DAN_R_IPS</td>
+										<td>Dorsal Attention Network L Intraparietal sulcus - R Intraparietal sulcus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">gmvth_lMedio_Dorsal</td>
+										<td>L Mediodorsal Thalamus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmvth_rMedio_Dorsal</td>
+										<td>R Mediodorsal Thalamus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lCinG</td>
+										<td>L Cingulate gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rCinG</td>
+										<td>R Cingulate gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lSupParG</td>
+										<td>L Superior Parietal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rSupParG</td>
+										<td>R Superior Parietal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lAngG</td>
+										<td>L Angular gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rAngG</td>
+										<td>R Angular gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lPCu</td>
+										<td>L Precuneus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rPCu</td>
+										<td>R Precuneus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lsuperiorfrontal</td>
+										<td>L Superior Frontal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rsuperiorfrontal</td>
+										<td>R Superior Frontal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lprecuneus</td>
+										<td>L Precuneus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rprecuneus</td>
+										<td>R Precuneus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lcaudalanteriorcingulate</td>
+										<td>L Caudal Anterior Cingulate</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rcaudalanteriorcingulate</td>
+										<td>R Caudal Anterior Cingulate</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lrostralanteriorcingulate</td>
+										<td>L Rostral Anterior Cingulate</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rrostralanteriorcingulate</td>
+										<td>R Rostral Anterior Cingulate</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lposteriorcingulate</td>
+										<td>L Posterior Cingulate</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rposteriorcingulate</td>
+										<td>R Posterior Cingulate</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lsuperiorparietal</td>
+										<td>L Superior Parietal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rsuperiorparietal</td>
+										<td>R Superior Parietal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_ccgenu_fa</td>
+										<td>Genu FA</td>
+										<td>WM</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_acr_l_fa</td>
+										<td>L Anterior Corona Radiata FA</td>
+										<td>WM</td>
+									</tr>
+									<tr>
+										<td scope="row">wm_acr_r_fa</td>
+										<td>R Anterior Corona Radiata FA</td>
+										<td>WM</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						<p><h3>Memory Domain (36 features)</h3></p>
+							<div class="table-responsive my-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">Feature Description</th>
+										<th scope="col">Imaging Modality</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">RHippocampus-LHippocampus</td>
+										<td>L Hippocampus - R Hippocampus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LHippocampus-LAmygdala</td>
+										<td>L Hippocampus - L Amygdala</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RHippocampus-RAmygdala</td>
+										<td>R Hippocampus - R Amygdala</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LHippocampus-LaPaHC</td>
+										<td>L Hippocampus - L Anterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RHippocampus-RaPaHC</td>
+										<td>R Hippocampus - R Anterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LHippocampus-LpPaHC</td>
+										<td>L Hippocampus - L Posterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RHippocampus-RpPaHC</td>
+										<td>R Hippocampus - R Posterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RAmygdala-LAmygdala</td>
+										<td>L Amygdala - R Amygdala</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RaPaHC-LaPaHC</td>
+										<td>L Anterior Parahippocampal gyrus - R Anterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LaPaHC-LpPaHC</td>
+										<td>L Anterior Parahippocampal gyrus - L Posterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RaPaHC-RpPaHC</td>
+										<td>R Anterior Parahippocampal gyrus - R Posterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RpPaHC-LpPaHC</td>
+										<td>L Posterior Parahippocampal gyrus - R Posterior Parahippocampal gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lHip</td>
+										<td>L Hippocampus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rHip</td>
+										<td>R Hippocampus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lParHipG</td>
+										<td>L Parahippocampal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rParHipG</td>
+										<td>R Parahippocampal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lSupFroG</td>
+										<td>L Superior Frontal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rSupFroG</td>
+										<td>R Superior Frontal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lSupParG</td>
+										<td>L Superior Parietal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rSupParG</td>
+										<td>R Superior Parietal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lPCu</td>
+										<td>L Precuneus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rPCu</td>
+										<td>R Precuneus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lMidTemG</td>
+										<td>L Middle Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rMidTemG</td>
+										<td>R Middle Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lInfTemG</td>
+										<td>L Inferior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rInfTemG</td>
+										<td>R Inferior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lparahippocampal</td>
+										<td>L Parahippocampal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rparahippocampal</td>
+										<td>R Parahippocampal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lsuperiorfrontal</td>
+										<td>L Superior Frontal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rsuperiorfrontal</td>
+										<td>R Superior Frontal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lprecuneus</td>
+										<td>L Precuneus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rprecuneus</td>
+										<td>R Precuneus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lmiddletemporal</td>
+										<td>L Middle Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rmiddletemporal</td>
+										<td>R Middle Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_linferiortemporal</td>
+										<td>L Inferior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rinferiortemporal</td>
+										<td>R Inferior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+
+						<p><h3>Auditory Domain (17 features)</h3></p>
+							<div class="table-responsive my-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">Feature Description</th>
+										<th scope="col">Imaging Modality</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">RHG-LHG</td>
+										<td>L Heschl’s gyrus - R Heschl’s gyrus</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LHG-LIC</td>
+										<td>L Heschl’s gyrus - L Insular cortex</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RHG-RIC</td>
+										<td>R Heschl’s gyrus - R Insular cortex</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LHG-LPT</td>
+										<td>L Heschl’s gyrus - L Planum temporale</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RHG-RPT</td>
+										<td>R Heschl’s gyrus - R Planum temporale</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RIC-LIC</td>
+										<td>L Insular cortex - R Insular cortex</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">LIC-LPT</td>
+										<td>L Insular cortex - L Planum temporale</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RIC-RPT</td>
+										<td>R Insular cortex - R Planum temporale</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">RPT-LPT</td>
+										<td>L Planum temporale - R Planum temporale</td>
+										<td>FC</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lSupTemG</td>
+										<td>L Superior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rSupTemG</td>
+										<td>R Superior Temporal gyrus</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_lIns</td>
+										<td>L Insula</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">gmv_rIns</td>
+										<td>R Insula</td>
+										<td>GMV</td>
+									</tr>
+									<tr>
+										<td scope="row">th_lsuperiortemporal</td>
+										<td>L Superior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rsuperiortemporal</td>
+										<td>R Superior Temporal gyrus</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_linsula</td>
+										<td>L Insula</td>
+										<td>CT</td>
+									</tr>
+									<tr>
+										<td scope="row">th_rinsula</td>
+										<td>R Insula</td>
+										<td>CT</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-10-4">
+							<h2 class="section-heading">Version Information</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
