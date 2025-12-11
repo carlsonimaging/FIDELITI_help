@@ -72,8 +72,9 @@
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Download</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Dependencies</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Preference Settings</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Running FIDELITI</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Checking Installation</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Preference Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">Running FIDELITI</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-person"></i></span>Participants</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Participant Demographics</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Imaging Files</a></li>
@@ -120,7 +121,7 @@
 		    <div class="container">
 			    <article class="docs-article" id="section-1">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">About the FIDELITI Dashboard<span class="docs-time">Last updated: 2025-11-21</span></h1>
+					    <h1 class="docs-heading">About the FIDELITI Dashboard<span class="docs-time">Last updated: 2025-12-10</span></h1>
 					    <section class="docs-intro">
 
 							<p>The purpose of the FIDELITI Dashboard (Fingerprinting Individual Differences in Lesion
@@ -250,14 +251,14 @@
 								required for the cortical morphometry (CAT12) standalone processing toolbox and does not
 									require a MATLAB license. This library should be installed within this folder:
 									/Applications/MATLAB/Matlab_Runtime/v93. If it is installed elsewhere on your computer please specify where it
-								is installed using the <a class="scrollto" href="#item-2-3">FIDELITI Preferences page</a>.</li>
+								is installed using the <a class="scrollto" href="#item-2-4">FIDELITI Preferences page</a>.</li>
 
 								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
 									   target="_blank">MATLAB Runtime Library R2021a (9.10)</a>. This runtime library is
 								required for the functional connectivity (CONN) standalone processing toolbox and does
 									not require a MATLAB license. This library should be installed within this folder:
 									/Applications/MATLAB/Matlab_Runtime/v910. If it is installed elsewhere on your computer please specify where it
-								is installed using the <a class="scrollto" href="#item-2-3">FIDELITI Preferences page</a></li>
+								is installed using the <a class="scrollto" href="#item-2-4">FIDELITI Preferences page</a></li>
 
 								<li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html" target="_blank">The FMRIB Software Library (FSL)</a>
 									is a powerful imaging software that is required for the white matter microstructure
@@ -272,6 +273,24 @@
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">Checking Installation</h2>
+						<p>To check that the dependencies have been correctly installed, you can navigate to the 
+							Preferences page and click the Check Installation button. This will check whether 
+							FIDELITI can access FSL, MRtrix3, and the MATLAB Runtime Libraries successfully.
+						If the dependencies have been successfully installed (or were installed previously), 
+						you should see four green checkboxes in this area.</p>
+						<p>If there are errors, please try to reinstall the applicable dependency and click 
+							the check installation button again.</p>
+							
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+						      		<a href="assets/images/preferences.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/preferences-thumb.png" alt="" title="Check Installation"/></a>
+							</div><!--//col-->
+						</div><!--//gallery-->
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-4">
 						<h2 class="section-heading">Preference Settings</h2>
 						<p>When first starting out with the FIDELITI Dashboard, a few preferences need to be specified. Please see the
 						<a class="scrollto" href="#section-8">Preferences section</a> for more details.</p>
@@ -287,7 +306,7 @@
 
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-2-4">
+					<section class="docs-section" id="item-2-5">
 						<h2 class="section-heading">Running FIDELITI</h2>
 						<p>Once you have successfully installed the Dashboard and all the dependencies, you can simply double click
 						the FIDELITI icon in your Applications folder to open it. A terminal window will also open behind the Dashboard
@@ -338,7 +357,8 @@
 							to be deleted and click the Delete Session button. Any changes must be saved by clicking the
 							Save Changes button. The Reload List button can be used to
 							discard any unwanted changes and revert to the previously saved list.</p>
-						 <p>Mandatory fields are indicated with a darker grey column heading. Demographics can be entered by clicking in each table cell and entering:
+						 <p>The five mandatory fields are indicated with bold column headings. Demographics can be entered by clicking in each table cell and entering 
+							the applicable information. Note that cells are yellow when in editing mode and blue when in selection mode.
 							<ul>
 						 		<li><b>ID - Participant ID</b> (mandatory). Consider this ID the unique identifier for each
 							 participant that will identify them throughout the Dashboard. If a participant has multiple
@@ -461,8 +481,9 @@
 
 						 <p>The Processing Queue is a listing of the sessions you
 							wish to process. First, select a participant session in the Participant list on the left
-							side and using the rightward arrow button, add it to the To be processed listing. This
-							should be repeated for all sessions to be processed. Then click Save Changes. </p>
+							side and using the rightward arrow button, add it to the To be processed listing (i.e., the processing queue). This
+							should be repeated for all sessions to be processed. Then click Save Changes. Multiple 
+						sessions can be selected and added to the processing queue at the same time.</p>
 
 						 <div class="simplelightbox-gallery row mb-3">
 							 <div class="col-12 col-md-4 mb-3">
@@ -470,12 +491,14 @@
 							 </div><!--//col-->
 							</div><!--//gallery-->
 
-						 <p>Note that selecting participants with the same available imaging files for the same batch is helpful here. For example,
+						 <p>Note that selecting participants with the same available imaging files for the same batch is helpful here 
+							(scroll to the right on either table to view which imaging files are available). For example,
 						selecting a participant with a missing diffusion file alongside others with diffusion files will
 						cause a "file missing" error when you select the diffusion pipeline in the next step. Instead,
 						 choose the participants with the same set of imaging to be processed in a single batch. Then,
 						 once that batch has been submitted for processing, construct a new batch of participants with
-						 matching imaging files to be submitted next. Subsequent batches can be submitted before the
+						 matching imaging files to be submitted next. </p>
+						 <p>Subsequent batches can be submitted before the
 							 previous batches are finished processing and will be queued accordingly. Sessions will be processed
 						 in parallel depending on your system resources though if the batches are larger, some sessions will be processed serially.</p>
 						 <p>At this stage, please ensure that every participant session contains the mandatory
@@ -485,7 +508,7 @@
 							 to the Participants page and make sure that they have been successfully entered there and that
 							 all changes have been saved. Then return to this page. Your participant information should now appear here.</p>
 						 <p>To remove a participant session from the "To be processed" list, select the session and click the
-							 leftward arrow to remove it. Click Save Changes.</p>
+							 leftward arrow to remove it. To clear the entire processing queue, click Clear Queue. Click Save Changes.</p>
 
 						 <div class="alert alert-info" role="alert">Note that the Save Changes button needs to be clicked
 							after constructing or changing your "To be processed" list before moving on to the processing preferences step.</div>
@@ -688,7 +711,8 @@
 						processed data for this neuroimaging feature. For example, if no diffusion imaging is available, the
 						white matter microstructure graphs will not have any red symbols and will have "nan" displayed for deviation scores for the
 						white matter graphs but red symbols and deviation scores may be present for the other cortical thickness, grey matter volume, and functional
-							connectivity graphs.</li>
+							connectivity graphs. If your participant's age is out of the range within which deviation scores can be calculated,
+						you will see a red "range" error in place of the deviation scores. Please check that your participant has an age between 6-22 years.</li>
 						<li><b>Participant results</b> - Results for the current participant are displayed using red symbols
 							where the shape reflects the sex (circle - female, square - male). The range of the
 							y-axis will auto-calculate to accommodate a wide range of participant feature values. For a single imaging session,
@@ -829,11 +853,12 @@
 					    <section class="docs-intro">
 						    <p>The Preferences page allows users to set a number of preference settings that will be used for
 							all Dashboard sessions. Be sure to click Save Preferences if you update any of the settings here.</p>
-							<div class="simplelightbox-gallery row mb-3">
-								<div class="col-12 col-md-4 mb-3">
-									<a href="assets/images/preferences.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/preferences-thumb.png" alt="" title="Preferences Page"/></a>
-								</div><!--//col-->
-							</div>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+						      		<a href="assets/images/preferences.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/preferences-thumb.png" alt="" title="Preferences"/></a>
+							</div><!--//col-->
+						</div><!--//gallery-->
 
 						</section><!--//docs-intro-->
 				    </header>
@@ -929,6 +954,12 @@
 							 the functional connectivity (CONN) pipeline. If either are missing, you will not be able to run
 							 these pipelines on your participant. Please see the <a class="scrollto" href="#item-2-2">Dependencies</a>
 							 documentation for information.</p>
+						
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How do I know that installation of dependencies has been successful?</h5>
+						 <p>To check that the dependencies are correctly installed and are accessible to the Dashboard, please access 
+							the Preferences page and click the Check Installation button. If the dependencies are all successfully installed, 
+							you should see four green checkmarks in this area. For more information, please see <a class="scrollto" href="#item-2-3">Checking Installation</a>
+							 documentation.</p>
 
 					 </section><!--//section-->
 					
@@ -1047,11 +1078,18 @@
 							then reload their dashboard. If there is no imaging file corresponding to this modality then these
 							"nan" values can be disregarded.</p>
 
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why is my participant’s d-score "range"?</h5>
+						<p>If you see a red "range" error in the top left corner of a graph, this typically means that your 
+							participant's age is outside the range for which deviation scores can be calculated. This range is
+							between 6-22 years depending on the sex of the participant and the neuroimaging feature chosen. If this occurs,
+							please check that your participant's age is correct and falls within this range. We anticipate that wider age ranges will be available 
+							in the future.</p>
+
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why do I get this error: Extrapolation not allowed with blending?</h5>
 						<p>This error has likely occurred because your participant’s age is outside the range for our reference
 							cohort and extrapolation outside of this range has not been enabled. The reference cohort ranges
 							are detailed in <a href="">Carlson et al (2026)</a> for each sex and imaging modality but generally
-							participants must be between 5.5 and 22 years of age.</p>
+							participants must be between 6 and 22 years of age.</p>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What output files and folders are saved during processing?</h5>
 						<p>The FIDELITI Dashboard exports many files during processing, most of which conform to the output formats
