@@ -104,15 +104,18 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Deviation Score Settings</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Resting State fMRI Settings</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">Scanner Harmonization</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Installation</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Processing</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Dashboard</a></li>
-					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-10"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>Supplementary</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-1">How to cite FIDELITI</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-2">Funding Sources</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-3">Neuroimaging Feature List</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-4">Version Information</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-list-check"></i></span>Logs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Main Log</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Job Listing</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-10"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-1">Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-2">Processing</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-3">Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-11"><span class="theme-icon-holder me-2"><i class="fas fa-circle-plus"></i></span>Supplementary</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-11-1">How to cite FIDELITI</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-11-2">Funding Sources</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-11-3">Neuroimaging Feature List</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-11-4">Version Information</a></li>
 			    </ul>
 
 		    </nav><!--//docs-nav-->
@@ -309,11 +312,7 @@
 					<section class="docs-section" id="item-2-5">
 						<h2 class="section-heading">Running FIDELITI</h2>
 						<p>Once you have successfully installed the Dashboard and all the dependencies, you can simply double click
-						the FIDELITI icon in your Applications folder to open it. A terminal window will also open behind the Dashboard
-						main window. This terminal has informative information about processing and may contain useful error
-							messages if errors occur during processing. If you close this terminal window, the main Dashboard
-							window as well as any active processing sessions will also close. Feel free to minimise the terminal
-						window if you do not need it during your Dashboard session.</p>
+						the FIDELITI icon in your Applications folder to open it. </p>
 						<p>The first page you will see upon opening the Dashboard is the Home screen. This contains useful
 							information for users first starting with FIDELITI. The navigation wizard in the top right corner
 							can help to point out the next (and previous) steps in the work flow. Or you can work your way down
@@ -526,8 +525,8 @@
 						to start the processing. Processing proceeds in the background and you can still use the Dashboard
 						while this processing proceeds.</p>
 						<div class="alert alert-info" role="alert">If you close the Dashboard before the image processing is
-							complete, as long as you have not closed the terminal window, the processing will continue. To stop
-							all processing, close the terminal window. Note that unsaved changes will be lost.</div>
+							complete, processing will stop. Note that unsaved changes will be lost. You may also need to close 
+						the MATLAB runtime application separately to stop all processing.</div>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-3">
@@ -602,7 +601,7 @@
 							are similar to the ones supplied with the FIDELITI Dashboard to minimise differences between
 							your participants and the normative database that may be introduced by different processing pipelines.</p>
 						<p>For a complete listing of column
-							names (case-sensitive) that are required please refer to the <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a>
+							names (case-sensitive) that are required please refer to the <a class="scrollto" href="#item-11-3">Neuroimaging Feature List</a>
 							or Supplementary Table 1 from <a href="">Carlson et al (2026)</a>. All column headings (features) need to be included even if there is
 							no data associated with them. Note that	the order of the feature columns does not need to conform
 							to the order given here except for the first seven demographic columns. For longitudinal data,
@@ -617,7 +616,7 @@
 
 					<section class="docs-section" id="item-4-7">
 						<h2 class="section-heading">Neuroimaging Feature List</h2>
-						<p>A full list of neuroimaging features is available in the Supplementary section <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a>.</p>
+						<p>A full list of neuroimaging features is available in the Supplementary section <a class="scrollto" href="#item-11-3">Neuroimaging Feature List</a>.</p>
 					</section><!--//section-->
 
 			    </article><!--//docs-article-->
@@ -680,7 +679,7 @@
 						there are two regions in the title which represent the two regions between which the connectivity
 						has been calculated. For example, R PreCG - R Caudate represents the functional connectivity between
 						the right precentral gyrus and the right caudate. For a complete listing of all features with descriptions,
-						please see the <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a> in the supplementary information section.</li>
+						please see the <a class="scrollto" href="#item-11-3">Neuroimaging Feature List</a> in the supplementary information section.</li>
 						<li><b>Y-axis</b> - The y-axis defines the neuroimaging feature and its native units. This will be
 						one of functional connectivity (units: r<sub>F</sub> Fisher-transformed Pearson correlation coefficient), grey matter volume (units: cm<sup>3</sup>),
 							cortical thickness (units: mm), or fractional anisotropy (white matter microstructure).</li>
@@ -814,7 +813,7 @@
 								functional domains of interest, such as sensorimotor, language, and more. The profiles page
 							allows users to customise existing profiles as well as create new profiles if desired. We recommend
 							copying an existing profile and editing it to start with. For a complete listing of all the neuroimaging
-							features available, please see the <a class="scrollto" href="#item-10-3">Neuroimaging Feature List</a>.</p>
+							features available, please see the <a class="scrollto" href="#item-11-3">Neuroimaging Feature List</a>.</p>
 							<div class="simplelightbox-gallery row mb-3">
 								<div class="col-12 col-md-4 mb-3">
 									<a href="assets/images/profiles.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/profiles-thumb.png" alt="" title="Profiles Page"/></a>
@@ -932,15 +931,47 @@
 
 			    </article><!--//docs-article-->
 			    
-			    
 			    <article class="docs-article" id="section-9">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Logs</h1>
+					    <section class="docs-intro">
+						    <p>Dashboard logs give pertinent information about currently running jobs and previously completed jobs.</p>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+						      		<a href="assets/images/jobs.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/jobs-thumb.png" alt="" title="Jobs"/></a>
+							</div><!--//col-->
+						</div><!--//gallery-->
+						</section><!--//docs-intro-->
+
+				    </header>
+				     <section class="docs-section" id="item-9-1">
+						<h2 class="section-heading">Main Log</h2>
+						 <p>The main log listing contains information about viewing different participant dashboards. It may also 
+							contain error messages resulting from an inability to load certain files. The main log can be copied into 
+						another application of your choice or it can be saved as a text file. You can also clear the contents of the 
+					log if you wish.</p>
+					 </section><!--//section-->
+
+					 <section class="docs-section" id="item-9-2">
+						<h2 class="section-heading">Job Listing</h2>
+						 <p>The job listing area contains individual logs for each currently running job and for previously completed jobs. For example, 
+							if a cortical morphometry pipeline is currently running, progress messages will be streamed to a job area 
+							reflecting the current process. If a functional connectivity job is also submitted, a new job area will appear 
+							that contains progress messages for that job. Jobs can be cancelled while running. All job logs can also be copied 
+							for transfer into another application or can be saved to a text file. Logs can also be cleared if desired. </p>
+					 </section><!--//section-->
+
+				</article><!--//docs-article-->
+
+			    <article class="docs-article" id="section-10">
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Frequently Asked Questions (FAQs)</h1>
 					    <section class="docs-intro">
 						    <p>Frequently asked questions from our users have been answered here.</p>
 						</section><!--//docs-intro-->
 				    </header>
-				     <section class="docs-section" id="item-9-1">
+				     <section class="docs-section" id="item-10-1">
 						<h2 class="section-heading">Installation</h2>
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Do I need a MATLAB Licence?</h5>
 						 <p>No MATLAB license is required though two MATLAB Runtime libraries are required for full functionality.
@@ -963,7 +994,7 @@
 
 					 </section><!--//section-->
 					
-					<section class="docs-section" id="item-9-2">
+					<section class="docs-section" id="item-10-2">
 						<h2 class="section-heading">Processing</h2>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why does my participant session not appear in the Participant list on the Processing page?</h5>
@@ -992,14 +1023,13 @@
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I do other things within the dashboard while pipeline processing is running?</h5>
 						<p>Yes, you can navigate around the Dashboard and view other pages while the processing is running.
 							You can also prepare and submit other batches for processing which will be queued accordingly depending
-							on the capacity of your system. If you close the background terminal window, the pipeline processing will stop.</p>
+							on the capacity of your system. </p>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>I closed the Dashboard main window while processing was running, will it still finish?</h5>
-						<p>If the Dashboard main window is closed during processing, the jobs will continue in the background.
-							If the terminal window is closed, the processing will stop. Note that all unsaved changes will be lost.
+						<p>If the Dashboard main window is closed during processing, processing will stop. Note that all unsaved changes will be lost.
 							Please reopen the Dashboard and restart the processing if it does not complete correctly. You can
-							still navigate around inside the Dashboard while the processing is running, just don’t close the
-							terminal window. Minimizing the main FIDELITI window and terminal while processing participant data is also fine,
+							still navigate around inside the Dashboard while the processing is running, just do not close the
+							Dashboard application window. Minimizing the main FIDELITI window while processing participant data is also fine,
 							processing will continue.</p>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How do I know when data processing is finished?</h5>
@@ -1007,9 +1037,9 @@
 							within the working directory on your computer (check where this working directory is in
 							the <a class="scrollto" href="#item-8-2">Preferences</a> page)
 							and will also be selectable in the list menu on the Dashboard page of FIDELITI. If your participant
-							does not appear in this list, click the Refresh List button. If they still do not appear, check
+							does not appear in this list and processing has completed, click the Refresh List button. If they still do not appear, check
 							that all applicable imaging files were correctly specified in the Participants page and that there
-							are no errors in the terminal processing window.</p>
+							are no errors in the log areas.</p>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why do I get the error: Image is not in NIFTI-1.1 format?</h5>
 						<p>Please ensure that all your *.nii files have been unzipped, i.e., they are not in *.nii.gz format.
@@ -1022,7 +1052,7 @@
 
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-9-3">
+					<section class="docs-section" id="item-10-3">
 							<h2 class="section-heading">Dashboard</h2>
 						    <h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why does my participant not appear in the Dashboard list?</h5>
 						<p>If your participant does not appear in the Dashboard list, it could be that the processing is not yet complete.
@@ -1126,14 +1156,14 @@
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 
-				<article class="docs-article" id="section-10">
+				<article class="docs-article" id="section-11">
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Supplementary Information</h1>
 					    <section class="docs-intro">
 							<p></p>
 						</section><!--//docs-intro-->
 				    </header>
-				     <section class="docs-section" id="item-10-1">
+				     <section class="docs-section" id="item-11-1">
 						<h2 class="section-heading">How to cite the FIDELITI Dashboard</h2>
 						 <p>If you wish to cite the FIDELITI Dashboard, please use the folowing information:</p>
 						 <p>Carlson HL, Hassett JD, Hilderley AJ, Maiani M, Romanow N, Craig BT, Forkert N, Kirton A (2026).
@@ -1141,7 +1171,7 @@
 							 a personalized dashboard for brain health.</p>
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-10-2">
+					<section class="docs-section" id="item-11-2">
 						<h2 class="section-heading">Funding Sources</h2>
 						<p>We thank the participants and families that volunteered to be control participants in this research. </p>
 						<p>The original development of the FIDELITI Dashboard was kindly supported by a Project grant from
@@ -1160,7 +1190,7 @@
 
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-10-3">
+					<section class="docs-section" id="item-11-3">
 						<h2 class="section-heading">Neuroimaging Feature List</h2>
 						<p>A full list of neuroimaging features available within the FIDELITI Dashboard is below.
 							There are over 150 features available.
@@ -2145,7 +2175,7 @@
 
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-10-4">
+					<section class="docs-section" id="item-11-4">
 							<h2 class="section-heading">Version Information</h2>
 							<p>The FIDELITI Dashboard is currently under development. An initial release is coming soon.</p>
 					</section><!--//section-->
