@@ -64,8 +64,8 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Security and Privacy</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Download</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Dependencies</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Checking Installation</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Install</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Dependencies</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Preference Settings</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">Running FIDELITI</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-person"></i></span>Participants</a></li>
@@ -117,7 +117,7 @@
 		    <div class="container">
 			    <article class="docs-article" id="section-1">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">About the FIDELITI Dashboard<span class="docs-time">Last updated: 2026-02-04</span></h1>
+					    <h1 class="docs-heading">About the FIDELITI Dashboard<span class="docs-time">Last updated: 2026-09-29</span></h1>
 					    <section class="docs-intro">
 
 							<p>The purpose of the FIDELITI Dashboard (Fingerprinting Individual Differences in Lesion
@@ -162,7 +162,7 @@
 							(at rest) and how synchronous these temporal patterns can be in spatially separate but
 							related regions of the brain, inferring that those areas are functionally connected.</li>
 								<li><b>Diffusion imaging</b> can capture information about the underlying microstructure of white matter,
-							possibly informing us on how well these bundles transmit information between brain areas.</li>
+							potentially informing us on how well these bundles transmit information between brain areas.</li>
 							</ul></p>
 
 						<p>In the FIDELITI Dashboard, these neuroimaging metrics are in turn grouped within broader functional domains of
@@ -224,7 +224,7 @@
 					    <section class="docs-intro">
 							<p>The FIDELITI Dashboard is currently available for MacOS only. Versions for other operating systems
 								are under development. FIDELITI is deployed as a compiled application and is installed via a disk image.
-							Additional software packages are required for full functionality. See the <a class="scrollto" href="#item-2-2">Dependencies</a> section
+							Additional software packages are required for full functionality. See the <a class="scrollto" href="#item-2-3">Dependencies</a> section
 								below for more details on those additional dependencies.</p>
 						</section><!--//docs-intro-->
 				    </header>
@@ -235,26 +235,33 @@
 						<a href="#item-2-1" class="btn btn-secondary">Download FIDELITI for MacOS</a>
 					</section><!--//section-->
 
-				     <section class="docs-section" id="item-2-2">
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Install</h2>
+						<p>Once you have downloaded the disk image, double click on it to open. Then double click "Install.command". This will
+							install FIDELITI to your Applications folder.
+						</p>
+					</section><!--//section-->
+
+				     <section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">Dependencies</h2>
 						<p>In order for the full multimodal analysis pipelines to be operational, the FIDELITI Dashboard
 							requires several other software packages to be installed. Note that if you already have these 
-							installed on your system, these steps can be skipped.
+							exact versions installed on your system, these steps can be skipped. Note that you can still 
+							use the cortical morphometry and functional connectivity pipelines without having the white 
+							matter pipeline installed.
 
 							<ul>
 								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
 									   target="_blank">MATLAB Runtime Library R2017b (9.3)</a>. This runtime library is
 								required for the cortical morphometry (CAT12) standalone processing toolbox and does not
 									require a MATLAB license. This library should be installed within this folder:
-									/Applications/MATLAB/Matlab_Runtime/v93. If it is installed elsewhere on your computer please specify where it
-								is installed using the <a class="scrollto" href="#item-2-4">FIDELITI Preferences page</a>.</li>
+									/Applications/MATLAB/Matlab_Runtime/v93.</li>
 
 								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
 									   target="_blank">MATLAB Runtime Library R2021a (9.10)</a>. This runtime library is
 								required for the functional connectivity (CONN) standalone processing toolbox and does
 									not require a MATLAB license. This library should be installed within this folder:
-									/Applications/MATLAB/Matlab_Runtime/v910. If it is installed elsewhere on your computer please specify where it
-								is installed using the <a class="scrollto" href="#item-2-4">FIDELITI Preferences page</a></li>
+									/Applications/MATLAB/Matlab_Runtime/v910.</li>
 
 								<li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html" target="_blank">The FMRIB Software Library (FSL)</a>
 									is a powerful imaging software that is required for the white matter microstructure
@@ -268,24 +275,6 @@
 						 </p>
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-2-3">
-						<h2 class="section-heading">Checking Installation</h2>
-						<p>To check that the dependencies have been correctly installed, you can navigate to the 
-							Preferences page and click the Check Installation button. This will check whether 
-							FIDELITI can access FSL, MRtrix3, and the MATLAB Runtime Libraries successfully.
-						If the dependencies have been successfully installed (or were installed previously), 
-						you should see four green checkboxes in this area.</p>
-						<p>If there are errors, please try to reinstall the applicable dependency and click 
-							the check installation button again.</p>
-							
-						<div class="simplelightbox-gallery row mb-3">
-							<div class="col-12 col-md-4 mb-3">
-						      		<a href="assets/images/preferences.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/preferences-thumb.png" alt="" title="Check Installation"/></a>
-							</div><!--//col-->
-						</div><!--//gallery-->
-
-					</section><!--//section-->
-
 					<section class="docs-section" id="item-2-4">
 						<h2 class="section-heading">Preference Settings</h2>
 						<p>When first starting out with the FIDELITI Dashboard, a few preferences need to be specified. Please see the
@@ -294,10 +283,6 @@
 							<ul><li><b>FIDELITI working folder</b> - This is the folder where the processed imaging files will be
 								saved on your system. By default, this is set to: /Desktop/FIDELITI. It can be updated in
 								<a class="scrollto" href="#section-8">Preferences</a>.</li>
-								<li><b>MATLAB Runtime folder</b> - Several toolboxes require the MATLAB Runtime libraries. By
-								default they are installed to /Applications/MATLAB/MATLAB_Runtime. However, if you have the
-								folders for v93 and v910 installed in a different folder, that folder needs to be specified
-								in <a class="scrollto" href="#section-8">Preferences</a>.</li>
 							</ul>
 
 					</section><!--//section-->
@@ -434,7 +419,7 @@
 						selected using the Select Import file button, the participants will be added to the participant
 						session list above. Make sure you click the Save Changes button to save your new participant
 						session list, or click the Reload List button to discard any changes.</p>
-						<p>The *.csv file must contain all column headings, however only the data for the mandatory
+						<p>The *.csv file must contain all column headings (case sensitive), however on each row, only the data for the mandatory
 							fields need to be entered.</p>
 
 						<div class="simplelightbox-gallery row mb-3">
@@ -512,11 +497,15 @@
 						<p>Once the Processing Queue has been constructed, the desired pipelines can be selected. Note
 							that the Cortical Morphometry pipeline requires a high-resolution T1-weighted image. The
 							Functional Connectivity pipeline requires a high-resolution T1-weighted image AND a
-							4-dimensional resting state image containing at least 100 volumes. The White matter microstructure
+							4-dimensional resting state image containing at least 100 volumes. The White Matter microstructure
 						pipeline requires a high-resolution T1-weighted image AND a diffusion-weighted image containing at
 						least six diffusion directions. Once you have selected the desired pipelines, click Run Processing
 						to start the processing. Processing proceeds in the background and you can still use the Dashboard
 						while this processing proceeds.</p>
+						<p>To monitor the progress of your processing jobs, you can open the Logs page. Each submitted job 
+							will have a progress log available for viewing and troubleshooting. For more information, see 
+							<a class="nav-link scrollto" href="#section-9">Logs</a>.
+						</p>
 						<div class="alert alert-info" role="alert">If you close the Dashboard before the image processing is
 							complete, processing will stop. Note that unsaved changes will be lost. You may also need to close 
 						the MATLAB runtime application separately to stop all processing.</div>
@@ -649,9 +638,9 @@
 						 <p>If your participant only has partial data, for example has only been successfully processed through
 						 the cortical morphometry pipeline, then the graphs for other features for functional connectivity
 							 and white matter microstructure will still show blue and purple
-						 symbols but will not have red symbols. You will also see nan (not a number) instead of deviation
-						 scores in the top left corner of each graph that has missing data. These can just be disregarded.
-						 Click on the right example above for an illustration.</p>
+						 symbols but will not have red symbols. You may also see nan (not a number) or range (indicating the missing 
+						 values are out of range) instead of deviation scores in the top left corner of each graph that has missing data. 
+						 These can just be disregarded. Click on the right example above for an illustration.</p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-5-2">
@@ -688,7 +677,7 @@
 							females (purple) and males (blue) separately. Shaded areas represent the 95% confidence intervals
 						around each line of best fit.</li>
 						<li><b>Deviation scores</b> - Deviation scores define departures (residuals) between actual and predicted
-							feature scores and are expressed in native feature units (d), as z-scores (standard deviations (SD)
+							feature scores and are expressed in three different ways: as native feature units (d), as z-scores (standard deviations (SD)
 							from the mean), and as percentiles based on the sex and age of the participant. For example, a
 							cortical thickness deviation (d) score is expressed in millimeters, and a functional connectivity
 							deviation score is expressed as a Fisher-transformed Pearson correlation coefficient. By contrast,
@@ -699,9 +688,9 @@
 						these values in red can be specified in <a class="scrollto" href="#section-8">Preferences</a>. More
 							information on how to export deviation scores can be found in the
 							<a class="scrollto" href="#item-5-4">Export Deviation Scores</a> section. Note that if these deviation
-						scores appear as "nan" (not a number), this indicates that this participant does not have successfully
+						scores appear as "nan" (not a number) or "range" (out of range), this indicates that this participant does not have successfully
 						processed data for this neuroimaging feature. For example, if no diffusion imaging is available, the
-						white matter microstructure graphs will not have any red symbols and will have "nan" displayed for deviation scores for the
+						white matter microstructure graphs will not have any red symbols and will have "nan" or "range" displayed for deviation scores for the
 						white matter graphs but red symbols and deviation scores may be present for the other cortical thickness, grey matter volume, and functional
 							connectivity graphs. If your participant's age is out of the range within which deviation scores can be calculated,
 						you will see a red "range" error in place of the deviation scores. Please check that your participant has an age between 6-22 years.</li>
@@ -727,9 +716,10 @@
 						only that single session will be included in the Summary Report. If the master participant record is
 						selected, all sessions will be included in the report. Also, the profile you currently have selected
 							will be used to generate the report. Once viewing the report, save it using the File/Save as
-						menu option in your PDF viewer. Note that reports are not automatically saved to preserve space on your system and will
+						menu option in your PDF viewer. </p>
+						<div class="alert alert-info" role="alert">Note that reports are not automatically saved to preserve space on your system and will
 							be overwritten each time the View Summary Report button is pressed unless each one is manually saved to
-							another location.</p>
+							another location.</div>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-4">
@@ -764,8 +754,7 @@
 						useful information on head motion and outliers that may affect data quality. For more information on CONN,
 						<a href="https://web.conn-toolbox.org/resources/conn-documentation/manual" target="_blank">see their documentation here</a>.
 							This image can also be found in the
-							Subjects/participant/session/CONN/FIDELITI_FC/results/qa folder along with an image illustrating
-						the quality of the normalization process.</li>
+							Subjects/participant/session/CONN/FIDELITI_FC/results/qa folder.</li>
 						<li><b>Check White Matter</b> - The Check White Matter button opens an MRview window with the participant's
 							fractional anisotropy (FA) map displayed. MRview is part of the MRTrix3 package so ensure you have <a href="https://www.mrtrix.org/download/" target="_blank">MRtrix3 installed</a> on your system.
 							Overlaid on the FA map are the warped JHU white matter regions of
@@ -854,17 +843,8 @@
 
 						</section><!--//docs-intro-->
 				    </header>
-				     <section class="docs-section" id="item-8-1">
-						<h2 class="section-heading">MATLAB Runtime Directory</h2>
-						<p>The cortical morphometry and functional connectivity pipelines both use toolboxes that require
-							MATLAB Runtime to be installed (no MATLAB License is required). By default, the MATLAB Runtime libraries are installed
-							in the folder: /Applications/MATLAB/MATLAB_Runtime.
-						However, if you have the folders for v93 and v910 installed in a different folder, that folder needs
-						to be specified here. Click the Select Directory button to specify the MATLAB Runtime folder. Then click
-						Save Preferences.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-8-2">
+				     
+					<section class="docs-section" id="item-8-1">
 						<h2 class="section-heading">FIDELITI Working Directory</h2>
 						<p>During image processing, the Dashboard needs to save processed files and summary results to a folder
 							on your system. By default, this is Desktop/FIDELITI. If you would like your participants' processed
@@ -872,7 +852,7 @@
 						and select this folder here. Then click	Save Preferences.</p>
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-8-3">
+					<section class="docs-section" id="item-8-2">
 							<h2 class="section-heading">Deviation Score Settings</h2>
 						<p>Deviation score thresholds determine the value at which z-score and percentile values are displayed
 							in red on each dashboard graph. For example, setting a lower z-score threshold of -3.1 would display
@@ -928,7 +908,9 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Logs</h1>
 					    <section class="docs-intro">
-						    <p>Dashboard logs give pertinent information about currently running jobs and previously completed jobs.</p>
+						    <p>Dashboard logs give pertinent information about currently running jobs and previously completed jobs. This page can be
+								useful for monitoring jobs and troubleshooting.
+							</p>
 
 						<div class="simplelightbox-gallery row mb-3">
 							<div class="col-12 col-md-4 mb-3">
@@ -950,7 +932,7 @@
 						<h2 class="section-heading">Job Listing</h2>
 						 <p>The job listing area contains individual logs for each currently running job and for previously completed jobs. For example, 
 							if a cortical morphometry pipeline is currently running, progress messages will be streamed to a job area 
-							reflecting the current process. If a functional connectivity job is also submitted, a new job area will appear 
+							reflecting the current process. If a functional connectivity job is also concurrently running, a new job area will appear 
 							that contains progress messages for that job. Jobs can be cancelled while running. All job logs can also be copied 
 							for transfer into another application or can be saved to a text file. Logs can also be cleared if desired. </p>
 					 </section><!--//section-->
@@ -968,22 +950,19 @@
 						<h2 class="section-heading">Installation</h2>
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Do I need a MATLAB Licence?</h5>
 						 <p>No MATLAB license is required though two MATLAB Runtime libraries are required for full functionality.
-						 Please see the Installation <a class="scrollto" href="#item-2-2">Dependencies</a> documentation for information
-						 on the MATLAB Runtime libraries required (v93 and v910). Also see the <a class="scrollto" href="#section-8">Preference Settings</a> for
-						 information on how to specify the MATLAB Runtime Library folder.</p>
+						 Please see the Installation <a class="scrollto" href="#item-2-3">Dependencies</a> documentation for information
+						 on the MATLAB Runtime libraries required (v93 and v910).</p>
 
 						 <h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Do I need both MATLAB Runtime Libraries or can I just install one?</h5>
 						 <p>Both MATLAB Runtime libraries are required for full pipeline functionality. Specifically, version v93 is
 							 required for the cortical morphometry (CAT12) processing pipeline and version v910 is required for
 							 the functional connectivity (CONN) pipeline. If either are missing, you will not be able to run
-							 these pipelines on your participant. Please see the <a class="scrollto" href="#item-2-2">Dependencies</a>
-							 documentation for information.</p>
+							 these pipelines on your participant. Please see the <a class="scrollto" href="#item-2-3">Dependencies</a>
+							 documentation for more information.</p>
 						
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How do I know that installation of dependencies has been successful?</h5>
-						 <p>To check that the dependencies are correctly installed and are accessible to the Dashboard, please access 
-							the Preferences page and click the Check Installation button. If the dependencies are all successfully installed, 
-							you should see four green checkmarks in this area. For more information, please see <a class="scrollto" href="#item-2-3">Checking Installation</a>
-							 documentation.</p>
+						 <p>Dependencies are automatically checked by FIDELITI before each pipeline is run and if these dependencies are not successfully installed and accessible to the Dashboard, 
+							messages in the <a class="scrollto" href="#item-9-1">Logs page</a> will inform you of this. </p>
 
 					 </section><!--//section-->
 					
@@ -997,7 +976,7 @@
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why can’t I edit my participant in the processing queue?</h5>
 						<p>Note that the participant list in the Processing page is read only. To update participant information,
-							return to the Participants page,	update the information, save the changes, and return to the Processing page.</p>
+							return to the Participants page, update the information, save the changes, and return to the Processing page.</p>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I submit more than one batch to the processing queue?</h5>
 						<p>Yes more than one batch can be submitted at the same time. Choosing participants with the same set of imaging to be processed
@@ -1032,7 +1011,7 @@
 							and will also be selectable in the list menu on the Dashboard page of FIDELITI. If your participant
 							does not appear in this list and processing has completed, click the Refresh List button. If they still do not appear, check
 							that all applicable imaging files were correctly specified in the Participants page and that there
-							are no errors in the log areas.</p>
+							are no errors in the <a class="nav-link scrollto" href="#section-9">Log page</a>.</p>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why do I get the error: Image is not in NIFTI-1.1 format?</h5>
 						<p>Please ensure that all your *.nii files have been unzipped, i.e., they are not in *.nii.gz format.
@@ -1040,7 +1019,9 @@
 							the file into the Participants page.</p>
 
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>If I re-run the same participant with the same ID and session, will my previous results be overwritten?</h5>
-						<p>Yes, if you use the same ID and session the previous results will be overwritten.</p>
+						<p>Yes, if you use the same ID and session the previous results will be overwritten. If you have longitudinal data, please use a 
+							unique session description to keep the sessions separated.
+						</p>
 
 
 					</section><!--//section-->
@@ -1049,10 +1030,10 @@
 							<h2 class="section-heading">Dashboard</h2>
 						    <h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why does my participant not appear in the Dashboard list?</h5>
 						<p>If your participant does not appear in the Dashboard list, it could be that the processing is not yet complete.
-							Try clicking the Refresh List button. If they still do not appear, this usually means that no
-							processing has been successfully completed for them or it is still processing. Please return to the Participants page and
-							ensure that the appropriate imaging files are specified for your participant and that they have been saved.
-							Then proceed to the Processing page, delete and re-add your participant to the “to be processed” queue,
+							Try clicking the Refresh List button and checking for errors on the <a class="nav-link scrollto" href="#section-9">Log page</a>. 
+							If they still do not appear, this usually means that no	processing has been successfully completed for them or it is still processing. 
+							Please return to the Participants page and ensure that the appropriate imaging files are specified for your participant and that they have been saved.
+							Then proceed to the Processing page, remove and re-add your participant to the “to be processed” queue,
 							select your pipeline(s) of choice with the checkboxes at the bottom, and click “Run Processing”.
 							Once the processing has successfully finished, return to the Dashboard page and click the Refresh
 							List button and your participant should now appear in the dashboard listing.</p>
@@ -1062,7 +1043,8 @@
 							of the graphs), that usually means that either your participant has no imaging feature data for that modality
 							(i.e., a missing imaging file), or the processing for that imaging modality has not yet been completed.
 							Please check that you have processed your participant’s data through that pipeline (functional connectivity,
-							cortical morphometry, white matter microstructure) and then access the dashboard page again.</p>
+							cortical morphometry, white matter microstructure) and then access the dashboard page again. Another possibility 
+						is that your participant's age is out of range and they cannot be plotted on the graph (or deviation scores calculated).</p>
 
 							<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How are the regression lines in the Dashboard graphs calculated?</h5>
 						<p>The regression lines are calculated using a LOESS regression model (locally estimated scatterplot smoothing).
@@ -1123,7 +1105,7 @@
 
 							<ul><li><b>ID.csv</b> - This file is named using your participant ID number and contains
 								the neuroimaging feature values extracted for each successfully processed pipeline. For a participant
-								with a single session, this file will have one row of feautre values. For a participant with
+								with a single session, this file will have one row of feature values. For a participant with
 								multiple sessions, there will be multiple rows where each one corresponds to a session.	Also
 								included is the demographic information that is used to plot the participant in the neuroimaging
 								feature graphs (ID, age, sex).</li>
