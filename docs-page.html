@@ -234,7 +234,7 @@
 					<section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Download</h2>
 						<p>Download the disk image here for MacOS.</p>
-						<a href="" rel="noopener noreferrer" class="btn btn-secondary">Download FIDELITI for MacOS (latest version)</a>
+						<a href="#item-2-1" rel="noopener noreferrer" class="btn btn-secondary">Download FIDELITI for MacOS (latest version)</a>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-2-2">
@@ -242,11 +242,11 @@
 						<p>To install the FIDELITI Dashboard, follow these steps:</p>
 						<ol>
 							<li>Download the disk image using the button above</li>
-							<li>Navigate to your Downloads folder</li>
+							<li>On your system, navigate to your Downloads folder</li>
 							<li>Double click on the FIDELITI Installer to open it</li>
 							<li>Inside the disk image, double click "Install.command"</li>
 							<li>FIDELITI will be installed to your Applications folder</li>
-							<li>Install dependencies (below)</li>
+							<li>Install <a href="#item-2-3">Dependencies</a> (below)</li>
 						</ol>
 						</p>
 					</section><!--//section-->
@@ -254,10 +254,12 @@
 				     <section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">Dependencies</h2>
 						<p>In order for the full multimodal analysis pipelines to be operational, the FIDELITI Dashboard
-							requires several other software packages to be installed. Note that if you already have these 
-							exact versions installed on your system, these steps can be skipped. Note that you can still 
-							use the cortical morphometry and functional connectivity pipelines without having the white 
-							matter pipeline installed.
+							requires several other software packages to be installed. If you already have these 
+							exact versions installed in the correct location on your system, these steps can be skipped. 
+							
+							<div class="alert alert-info" role="alert">Note that you can still 
+							use the cortical morphometry and functional connectivity pipelines (requiring only the two MATLAB 
+							runtime libraries) without having the white matter pipeline installed (FSL, MRtrix3).</div>
 
 							<ul>
 								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
@@ -274,11 +276,15 @@
 
 								<li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html" target="_blank">The FMRIB Software Library (FSL)</a>
 									is a powerful imaging software that is required for the white matter microstructure
-									processing pipeline. FSL can be installed using the default settings.</li>
+									processing pipeline. FSL can be installed using the default settings. If you do not already have FSL,
+								the latest version can be installed. If you do already have FSL, then your current version can 
+							be used. We recommend not updating FSL in the middle of a project using FIDELITI.</li>
 
 						 		<li><a href="https://www.mrtrix.org/" target="_blank">MRtrix3</a> is an advanced
 									white matter imaging tool that is required for the white matter microstructure pipeline and
-									for certain quality assessment tools. MRtrix3 can be installed using the default settings.</li>
+									for certain quality assessment tools. MRtrix3 can be installed using the default settings. 
+								If you do not already have MRtrix3, the latest version can be installed. If you do already have MRtrix3, then your current version can 
+							be used. We recommend not updating MRtrix3 in the middle of a project using FIDELITI.</li>
 							</ul>
 
 						 </p>
