@@ -92,11 +92,10 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Profile List</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Profile Edit</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Preferences</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">MATLAB Runtime Directory</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">FIDELITI Working Directory</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Deviation Score Settings</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Resting State fMRI Settings</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">Scanner Harmonization</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">FIDELITI Working Directory</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Deviation Score Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Resting State fMRI Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">Scanner Harmonization</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-list-check"></i></span>Logs</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Main Log</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Job Listing</a></li>
@@ -888,14 +887,14 @@
 							<li><b>percentiles</b> - filename: ID_session_pct.csv</li></ul>
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-8-4">
+					<section class="docs-section" id="item-8-3">
 							<h2 class="section-heading">Resting State fMRI Settings</h2>
 						<p>Resting state processing settings can be specified here. Specifically the repetition time (TR) in seconds,
 						the smoothing kernel in mm, and the slice timing correction setting (drop down list). Note that these
 						settings should be set for your data before the processing starts.</p>
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-8-5">
+					<section class="docs-section" id="item-8-4">
 							<h2 class="section-heading">Scanner Harmonization</h2>
 						<p>Harmonization procedures attempt to reduce the effects of different scanners and sequences in
 							multi-site data by statistically transforming one dataset to more closely resemble a reference
@@ -1029,7 +1028,7 @@
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How do I know when data processing is finished?</h5>
 						<p>When the data processing is completed, your participant will have an ID.csv file in their Subjects folder
 							within the working directory on your computer (check where this working directory is in
-							the <a class="scrollto" href="#item-8-2">Preferences</a> page)
+							the <a class="scrollto" href="#item-8-1">Preferences</a> page)
 							and will also be selectable in the list menu on the Dashboard page of FIDELITI. If your participant
 							does not appear in this list and processing has completed, click the Refresh List button. If they still do not appear, check
 							that all applicable imaging files were correctly specified in the Participants page and that there
@@ -1122,7 +1121,7 @@
 						<p>The FIDELITI Dashboard exports many files during processing, most of which conform to the output formats
 							for the CAT12 and CONN toolboxes. The main data files that are of interest and are also used for
 							the dashboard plots are listed below. Files are saved to a folder called Subjects in the
-							<a class="scrollto" href="#item-8-2">FIDELITI Working Directory</a> specified in the Preferences page.
+							<a class="scrollto" href="#item-8-1">FIDELITI Working Directory</a> specified in the Preferences page.
 						Some files are saved to the session folder within the participant folder if they are session-specific.</p>
 
 							<ul><li><b>ID.csv</b> - This file is named using your participant ID number and contains
@@ -1149,7 +1148,7 @@
 								<li><b>ID_session_pct.csv</b> - This file contains the percentile scores for all neuroimaging
 									feature values for a single session and is found in the session directory.</li></ul>
 						<p>Note that these last three deviation score (ID_session_*.csv) files are only saved if they are checked in the
-							<a class="scrollto" href="#item-8-3">Deviation Score Settings</a> on the Preferences page and if the Export Deviation Scores button has been clicked in the Dashboard page.</p>
+							<a class="scrollto" href="#item-8-2">Deviation Score Settings</a> on the Preferences page and if the Export Deviation Scores button has been clicked in the Dashboard page.</p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 
