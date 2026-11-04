@@ -65,9 +65,10 @@
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Download</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Install</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Dependencies</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Preference Settings</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">Running FIDELITI</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Security Warnings</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Dependencies</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">Preference Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-6">Running FIDELITI</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-person"></i></span>Participants</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Participant Demographics</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Imaging Files</a></li>
@@ -225,7 +226,7 @@
 					    <section class="docs-intro">
 							<p>The FIDELITI Dashboard is currently available for MacOS only. Versions for other operating systems
 								are under development. FIDELITI is deployed as a compiled application and is installed via a disk image.
-							Additional software packages are required for full functionality. See the <a class="scrollto" href="#item-2-3">Dependencies</a> section
+							Additional software packages are required for full functionality. See the <a class="scrollto" href="#item-2-4">Dependencies</a> section
 								below for more details on those additional dependencies.</p>
 						</section><!--//docs-intro-->
 				    </header>
@@ -242,15 +243,44 @@
 						<ol>
 							<li>Download the disk image using the button above</li>
 							<li>On your system, navigate to your Downloads folder</li>
-							<li>Double click on the FIDELITI Installer to open it</li>
-							<li>Inside the disk image, double click "Install.command"</li>
+							<li>Double click on the FIDELITI Installer disk image to open it</li>
+							<li>Inside the FIDELITI Installer disk image, double click "Install.command"</li>
 							<li>FIDELITI will be installed to your Applications folder</li>
-							<li>Install <a href="#item-2-3">Dependencies</a> (below)</li>
+							<li>Install <a href="#item-2-4">Dependencies</a> (below)</li>
 						</ol>
 						</p>
 					</section><!--//section-->
 
-				     <section class="docs-section" id="item-2-3">
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">Security Warnings</h2>
+						<p>You may encounter security warnings when trying to run the installer that state that MacOS cannot verify the developer of "install.command". 
+							If this is the case, click "Open" or "Open Anyway". If the security warnings persist, please follow the instructions below. 
+							Note that the images and warnings below may not exactly match your system (depending on OS version).
+						</p>
+						<ol>
+							<li>Open System Settings (or System Preferences)</li>
+							<li>Click on Privacy & Security</li>
+							<li>Near the bottom, you will see a section called "Allow apps downloaded from:"</li>
+							<li>If you see a "blocked" option, click on "Open Anyway"</li>
+							<li>In the FIDELITI Installer disk image, double click on install.command again</li>
+							<li>You may need to also click Open on the subsequent warning</li>
+							<li>These tasks may need to be completed more than once depending on your security settings</li>
+						</ol>
+						</p>
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/security1.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/security1-thumb.png" alt="" /></a>
+							</div><!--//col-->
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/security2.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/security2-thumb.png" alt="" /></a>
+							</div><!--//col-->
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/security3.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/security3-thumb.png" alt="" /></a>
+							</div><!--//col-->
+						</div><!--//gallery-->
+					</section><!--//section-->
+
+				     <section class="docs-section" id="item-2-4">
 						<h2 class="section-heading">Dependencies</h2>
 						<p>In order for the full multimodal analysis pipelines to be operational, the FIDELITI Dashboard
 							requires several other software packages to be installed. If you already have these 
@@ -262,24 +292,24 @@
 
 							<ul>
 								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
-									   target="_blank">MATLAB Runtime Library R2017b (9.3)</a>. This runtime library is
+									   target="_blank">MATLAB Runtime Library R2017b (9.3)</a> (Required). This runtime library is
 								required for the cortical morphometry (CAT12) standalone processing toolbox and does not
 									require a MATLAB license. This library should be installed within this folder:
 									/Applications/MATLAB/Matlab_Runtime/v93.</li>
 
 								<li><a href="https://www.mathworks.com/products/compiler/matlab-runtime.html"
-									   target="_blank">MATLAB Runtime Library R2021a (9.10)</a>. This runtime library is
+									   target="_blank">MATLAB Runtime Library R2021a (9.10)</a> (Required). This runtime library is
 								required for the functional connectivity (CONN) standalone processing toolbox and does
 									not require a MATLAB license. This library should be installed within this folder:
 									/Applications/MATLAB/Matlab_Runtime/v910.</li>
 
-								<li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html" target="_blank">The FMRIB Software Library (FSL)</a>
+								<li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html" target="_blank">The FMRIB Software Library (FSL)</a> (Optional)
 									is a powerful imaging software that is required for the white matter microstructure
 									processing pipeline. FSL can be installed using the default settings. If you do not already have FSL,
 								the latest version can be installed. If you do already have FSL, then your current version can 
 							be used. We recommend not updating FSL in the middle of a project using FIDELITI.</li>
 
-						 		<li><a href="https://www.mrtrix.org/" target="_blank">MRtrix3</a> is an advanced
+						 		<li><a href="https://www.mrtrix.org/" target="_blank">MRtrix3</a> (Optional) is an advanced
 									white matter imaging tool that is required for the white matter microstructure pipeline and
 									for certain quality assessment tools. MRtrix3 can be installed using the default settings. 
 								If you do not already have MRtrix3, the latest version can be installed. If you do already have MRtrix3, then your current version can 
@@ -289,7 +319,7 @@
 						 </p>
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-2-4">
+					<section class="docs-section" id="item-2-5">
 						<h2 class="section-heading">Preference Settings</h2>
 						<p>When first starting out with the FIDELITI Dashboard, a few preferences need to be specified. Please see the
 						<a class="scrollto" href="#section-8">Preferences section</a> for more details.</p>
@@ -301,7 +331,7 @@
 
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-2-5">
+					<section class="docs-section" id="item-2-6">
 						<h2 class="section-heading">Running FIDELITI</h2>
 						<p>Once you have successfully installed the Dashboard and all the dependencies, you can simply double click
 						the FIDELITI icon in your Applications folder to open it. Please note that the first time FIDELITI is opened, 
@@ -966,19 +996,32 @@
 						<h2 class="section-heading">Installation</h2>
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Do I need a MATLAB Licence?</h5>
 						 <p>No MATLAB license is required though two MATLAB Runtime libraries are required for full functionality.
-						 Please see the Installation <a class="scrollto" href="#item-2-3">Dependencies</a> documentation for information
+						 Please see the Installation <a class="scrollto" href="#item-2-4">Dependencies</a> documentation for information
 						 on the MATLAB Runtime libraries required (v93 and v910).</p>
 
 						 <h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Do I need both MATLAB Runtime Libraries or can I just install one?</h5>
 						 <p>Both MATLAB Runtime libraries are required for full pipeline functionality. Specifically, version v93 is
 							 required for the cortical morphometry (CAT12) processing pipeline and version v910 is required for
-							 the functional connectivity (CONN) pipeline. If either are missing, you will not be able to run
-							 these pipelines on your participant. Please see the <a class="scrollto" href="#item-2-3">Dependencies</a>
+							 the functional connectivity (CONN) pipeline. If either are missing, you will not be able to open the Dashboard. 
+							 Please see the <a class="scrollto" href="#item-2-4">Dependencies</a>
 							 documentation for more information.</p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>After I install FIDELITI, it will not open.</h5>
+						 <p>If you have installed FIDELITI and it "bounces" in your tray and then closes, please ensure that both MATLAB Runtime libraries are 
+							successfully installed in the folders below. If either are missing, you will not be able to open the Dashboard. Please see the <a class="scrollto" href="#item-2-4">Dependencies</a>
+							 documentation for more information.
+							<ul>
+								<li>/Applications/MATLAB/MATLAB_Runtime/v93</li>
+								<li>/Applications/MATLAB/MATLAB_Runtime/v910</li> 
+							</ul>
+							</p>
 						
 						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How do I know that installation of dependencies has been successful?</h5>
 						 <p>Dependencies are automatically checked by FIDELITI before each pipeline is run and if these dependencies are not successfully installed and accessible to the Dashboard, 
 							messages in the <a class="scrollto" href="#item-9-1">Logs page</a> will inform you of this. </p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>I am encountering security warnings when trying to install.</h5>
+						 <p>If you encounter MacOS security warnings, please see the documentation on <a class="scrollto" href="#item-2-3">Security Warnings</a>.</p>
 
 					 </section><!--//section-->
 					
